@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OpenG-qkmb Link Page</title>
+</head>
+<body bgcolor="#00FFFB">
+	<script>
+		function getarg(name) 
+		{
+    		var result=window.location.search.match(new RegExp("[\?\&]"+name+"=([^\&]+)","i"));
+    		if ((result==null)||(result.length<1)) 
+			{
+        		//return "";
+				window.location.href="index.html";
+    		}
+    		return result[1];
+		}
+		var str=getarg("link");
+   		//if(str=="")window.location.href="index.html";
+		window.location.href=str;
+	</script>
+	<h1>OpenG-qkmb Link Page</h1>
+	<hr>
+	<p>这个页面是供跳转所用，如果您一直停留在此页面，请尝试刷新或返回上一页面。</p>
+</body>
+</html>
