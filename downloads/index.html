@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>下载- 哈儿</title>
+ </head>
+ <body style="background: #000000;">
+ <div style="color: #FFFFFF; text-align: center;">
+	<a style="color: #FFFFFF" href="..\index.html">主页</a>
+	<h1>下载页面</h1>
+	<h3>您所选择的下载内容：<span id="fn" class="fn" name="fn" style="color: #AAFFFF">[FNFN]</span></h3>
+	<p id="dn" class="dn" name="dn">[DNDN]</p>
+	<script>
+	function getQ(name)
+	{
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+    }
+	var idd=getQ("id");
+	if(idd=="a")
+		{
+			document.getElementById("fn").innerHTML="普鲁士进行曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名：Prussia.mp3";
+			document.getElementById("dn").innerHTML="<a id=\"dn\" style=\"color: #FFFFFF;\" href=\"Prussia.mp3\" download=\"Prussia_NA.mp3\"><img src=\"download.jpg\" alt=\"下载   DOWNLOAD\" title=\"下载   DOWNLOAD\"></a>";
+		}
+		else
+		{
+			document.getElementById("fn").innerHTML="未选择文件";
+			document.getElementById("dn").innerHTML="未选择文件";
+		}
+  </script>
+ </div>
+ </body>
+</html>

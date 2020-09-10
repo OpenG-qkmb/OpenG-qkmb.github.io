@@ -12,6 +12,13 @@
 		window.location.href=jump;
 		//alert(jump);
 	}
+	function ss()
+	{
+		var j=document.getElementById("ssid").value;
+		var jump="downloads/index.html?id="+j;
+		window.location.href=jump;
+		//alert(jump);
+	}
 </script>
 </head>
 <body style="background: #000000">
@@ -48,6 +55,10 @@
 <br><br><hr><br><br>
 <h1>哈儿实验室数据库</h1>
 <input type="text" id="sid" placeholder="请输入哈儿码">&nbsp;<button OnClick="s()">搜索</button>
+<br><br><hr>
+<br><br><hr><br><br>
+<h1>下载中心</h1>
+<input type="text" id="ssid" placeholder="请输入下载码">&nbsp;<button OnClick="ss()">下载</button>
 <br><br><hr>
 <p>哈儿实验室&nbsp;&copy;&nbsp;2018-2020&nbsp;保留所有权利。</p>
 <a href="about.html"><button>关于我们</button></a>&nbsp;&nbsp;<a href="https://mrhaer.github.io/"><button>哈儿实验室分部（由HR先生代理）</button></a>
