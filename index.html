@@ -19,6 +19,14 @@
 		window.location.href=jump;
 		//alert(jump);
 	}
+	if (top.location.host != window.location.host) 
+	{
+　　top.location.href = window.location.href;
+	}
+	if(window != window.top)
+	{
+		window.top.location.href = correctURL;
+	}
 </script>
 </head>
 <body style="background: #000000">
@@ -29,32 +37,9 @@
 <div style="text-align: center; color: #FFFFFF;">
 <h1>哈儿</h1>
 <h3 style="color: #AAAAAA">与哈儿实验室互动的最好渠道</h3>
-<div style="text-align: center; background: #FFFFFF; color: #000000">
-<h1>最新</h1>
 <div style="text-align: center; background: #AAAAAA; color: #FFFFFF">
-<ol>
-<li><a style="color: #00FF00" href="news\1.html" target="_blank">
-哈儿页面正式上线</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-发布者：<a style="color: #FFFF00" href="user\1\index.html" target="_blank">OpenG-qkmb</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：2020年7月23日 21:12:54</li>
-<li><a style="color: #00FF00" href="news\2.html" target="_blank">
-【实验】原子重组实验</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-发布者：<a style="color: #FFFF00" href="user\2\index.html" target="_blank">jky</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：2020年7月24日 18:10:07</li>
-<li><a style="color: #00FF00" href="news\3.html" target="_blank">
-【实验】高等智商哈儿</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-发布者：<a style="color: #FFFF00" href="user\1\index.html" target="_blank">OpenG-qkmb</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：2020年9月7日 17:18:47</li>
-<li><a style="color: #00FF00" href="news\4.html" target="_blank">
-搜捕橄榄先生</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-发布者：<a style="color: #FFFF00" href="user\1\index.html" target="_blank">OpenG-qkmb</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间：2020年9月14日 17:25:59</li>
-</ol>
-</div>
+<h1>最新</h1>
+<iframe frameborder="0" scrolling="auto" src="news.html" width="100%" height="100px"></iframe>
 </div>
 <br><br><hr><br>
 <h1>哈儿实验室数据库</h1>
