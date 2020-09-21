@@ -25,6 +25,11 @@ function getQ(name)
 			document.getElementById("title").innerHTML="搜捕橄榄先生  - 最新";
 			document.getElementById("main").innerHTML="<h1>搜捕橄榄先生</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\1\\index.html\" target=\"_blank\">OpenG-qkmb</a>\n<br>时间：2020年9月14日 17:25:59</p>\n<p>\n在<a style=\"color: #FFAAAA\" href=\"show.html?news=3\" target=\"_blank\">【实验】高智商哈儿</a>中，我们产生了一个最糟糕的失败品——<a style=\"color: #AAFFAA\" href=\"..\\access\\show.html?haer=6\" target=\"_blank\">橄榄先生</a>。\n<br><br>\n这个废弃哈儿首先认为<a style=\"color: #FFFFAA\" href=\"..\\user\\1\\index.html\" target=\"_blank\">OpenG-qkmb</a>是哈儿，自己在治疗后者。\n<br><br>\n随后，它开始带领哈儿要求获得管理人员职位，被镇压后打伤1名工作人员，立即逃跑。\n<br><br>\n目前该哈儿已被定义为B等危险级别，在其主页（见上）中我们详细描述了他，目前我们正在全面搜捕，<span style=\"color: #FF0000;\"><b>见到请联系我们</b><span style=\"color: #000000;\">，</span><b>但请勿靠近或使其引起注意</b></span>！<br><br>\n附件：【实验】高智商哈儿、橄榄先生主页\n<br><br>\n<iframe src=\"show.html?news=3\" width=\"35%\" height=\"300px\"></iframe>\n<iframe src=\"..\\access\\show.html?haer=6\" width=\"35%\" height=\"300px\"></iframe>\n</p>";
 	}
+	else if(idd=="5")
+	{
+			document.getElementById("title").innerHTML="【实验】TGT孩子见面实验  - 最新";
+			document.getElementById("main").innerHTML="<h1>【实验】TGT孩子见面实验</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\1\\index.html\" target=\"_blank\">OpenG-qkmb</a>\n<br>时间：2020年9月21日 11:15:31</p>\n<p>\n1.实验主题：<br>让一个普通哈儿与TGT孩子见面\n</p>\n<p>\n2.实验方法：<br>让一个普通哈儿与TGT孩子见面，位置在太平洋中部某海岛\n</p>\n<p>\n3.实验结果：<br>哈儿非常震惊，上前一步，昂首挺胸地说：“安拉胡阿克巴！安拉胡阿克巴！”随后向海岸跑去，<br>\n冲入大海，根据定位，这个哈儿以无法捕获的速度，30分钟后出现在南极某浮冰区域，工作人员赶到后发现其尸体。\n</p>";
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
