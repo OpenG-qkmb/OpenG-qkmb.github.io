@@ -1,2 +1,2 @@
-var mhn=8;
-document.getElementById("haernum").innerHTML="1~"+mhn;
+var mhn=8,minhn=0;
+document.getElementById("haernum").innerHTML=minhn+"~"+mhn;
