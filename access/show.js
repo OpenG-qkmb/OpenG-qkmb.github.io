@@ -50,6 +50,11 @@ function getQ(name)
 		document.getElementById("title").innerHTML="炸（zhá）药 - 哈儿实验室数据库";
 		document.getElementById("main").innerHTML="<h1>炸（zhá）药</h1>\n<h3 style=\"color: #7F7F7F\">以油炸方式制成的药品</h3>\n<br>\n<p>\n名字：&nbsp;炸（zhá）药\n<br><br>\n年龄：&nbsp;0\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FF0000\">A</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;8\n<br><br>\n信息：<br>这是以油炸方式制成的药品，在一次跳水比赛中一名运动员感冒服用过多，入水时炸毁游泳场。\n<br>\n在内燃机中使用这种以油炸过的【禁止显示】药，可以使热机效率达到100%及以上。\n<br><br><br>\n<img src=\"haer-img\\8.jpg\" alt=\"8\" title=\"炸（zhá）药 - 8\" width=\"75%\">\n</p>";
 	}
+	else if(idd=="9")
+	{
+		document.getElementById("title").innerHTML="已体检对象 - 哈儿实验室数据库";
+		document.getElementById("main").innerHTML="<h1>已体检对象</h1>\n<h3 style=\"color: #7F7F7F\">体检合格后狂喜的哈儿</h3>\n<br>\n<p>\n名字：&nbsp;已体检对象\n<br><br>\n年龄：&nbsp;14\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #00FF00\">D</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;9\n<br><br>\n信息：<br>这个哈儿体检合格后进入<a href=\"..\\door\\index.html\" style=\"color: #AAFFFF;\" target=\"_blank\">哈儿门</a>，随后拿着显示体检合格体检单到处乱跳，\n<br>\n导致哈儿们<span style=\"color: #FFAAAA;\">疯狂跳动了一个下午</span>，最后被我们用麻醉枪全部制服。\n<br>\n它有一个奇怪的癖好：喜欢在<a href=\"..\\door\\index.html\" style=\"color: #AAFFFF;\" target=\"_blank\">哈儿门</a>处反复进出，动作娴熟，每天能进<span style=\"color: #FFFFAA;\">100次以上</span>！\n<br>\n这导致它成为低智商哈儿，智力令人堪忧，但现在它已经对所有麻醉剂产生了抵抗力，目前我们无法阻止它智商骤降。\n<br><br><br>\n<img src=\"haer-img\\9.jpg\" alt=\"9\" title=\"已体检对象 - 9\" width=\"75%\">\n</p>";
+	}
 	else//注意第二年要更新哈儿的年龄！！！
 	{
 		document.getElementById("title").innerHTML="无档案 - 哈儿实验室数据库";
