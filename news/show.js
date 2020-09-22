@@ -30,6 +30,11 @@ function getQ(name)
 			document.getElementById("title").innerHTML="【实验】TGT孩子见面实验  - 最新";
 			document.getElementById("main").innerHTML="<h1>【实验】TGT孩子见面实验</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\1\\index.html\" target=\"_blank\">OpenG-qkmb</a>\n<br>时间：2020年9月21日 11:15:31</p>\n<p>\n1.实验主题：<br>让一个普通哈儿与TGT孩子见面\n</p>\n<p>\n2.实验方法：<br>让一个普通哈儿与TGT孩子见面，位置在太平洋中部某海岛\n</p>\n<p>\n3.实验结果：<br>哈儿非常震惊，上前一步，昂首挺胸地说：“安拉胡阿克巴！安拉胡阿克巴！”随后向海岸跑去，<br>\n冲入大海，根据定位，这个哈儿以无法捕获的速度，30分钟后出现在南极某浮冰区域，工作人员赶到后发现其尸体。\n</p>";
 	}
+	else if(idd=="6")
+	{
+			document.getElementById("title").innerHTML="炸（zhá）药  - 最新";
+			document.getElementById("main").innerHTML="<h1>炸（zhá）药</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\1\\index.html\" target=\"_blank\">OpenG-qkmb</a>\n<br>时间：2020年9月22日 13:09:17</p>\n<p>\n炸（zhá）药，即油炸制成的药，\n<br>\n美味可口，功效极佳，善于爆炸（zhá）（即油炸周边物体），强身健体，延年益寿。\n<br>\n近日一名运动员服用炸（zhá）药后跳水，入水时炸（zhá）毁游泳场。（即油炸了游泳场）\n<br>\n<br>\n目前我们发现了“炸（zhá）药生产理论”，如下图：\n<br>\n<img src=\"newsimgs\\1.jpg\" alt=\"炸（zhá）药生产理论\" title=\"炸（zhá）药生产理论\" width=\"50%\"></p>";
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
