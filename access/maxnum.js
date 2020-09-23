@@ -1,2 +1,2 @@
-var mhn=9,minhn=0;
+var mhn=10,minhn=0;
 document.getElementById("haernum").innerHTML=minhn+"~"+mhn;
