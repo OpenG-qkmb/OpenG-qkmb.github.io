@@ -1,4 +1,4 @@
-function getQ(name)
+﻿function getQ(name)
 	{
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             var r = window.location.search.substr(1).match(reg);
@@ -13,7 +13,7 @@ function getQ(name)
 	else if(idd=="2")
 	{
 			document.getElementById("title").innerHTML="【实验】原子重组实验 - 最新";
-			document.getElementById("main").innerHTML="<h1>【实验】原子重组实验</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\2\\index.html\" target=\"_blank\">jky</a>\n<br>时间：2020年7月24日 18:10:07</p>\n<p>\n1.实验主题：<br>将原子重组形成新的组织\n</p>\n<p>\n2.实验方法：<br>使用【禁止显示】设备分解组织的原子，重组尝试形成新的组织\n</p>\n<p>\n3.实验结果：<br>错误率约为0.73%，<br>\n正确组成一些无法使用的组织，<br>\n错误原因：未知，设备错误，设备将自身分解，导致重组未开始，损失1台设备\n</p>";
+			document.getElementById("main").innerHTML="<h1>【实验】原子重组实验</h1>\n<p>发布者：<a style=\"color: #FFFF00\" href=\"..\\user\\2\\index.html\" target=\"_blank\">夢の死のメッセージ</a>\n<br>时间：2020年7月24日 18:10:07</p>\n<p>\n1.实验主题：<br>将原子重组形成新的组织\n</p>\n<p>\n2.实验方法：<br>使用【禁止显示】设备分解组织的原子，重组尝试形成新的组织\n</p>\n<p>\n3.实验结果：<br>错误率约为0.73%，<br>\n正确组成一些无法使用的组织，<br>\n错误原因：未知，设备错误，设备将自身分解，导致重组未开始，损失1台设备\n</p>";
 	}
 	else if(idd=="3")
 	{
