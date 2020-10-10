@@ -77,6 +77,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="7")
+	{
+			var title="一些禁止行为";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月10日 12:06:56";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n最新的一些禁止行为目前已经可用：\n<br>\n<ol>\n<li>禁止把内裤穿在头上</li>\n<li><span style=\"color: #FF0000;\"><strong>禁止</strong></span>雄性哈儿以如图的形式如厕：<img src=\"newsimgs\\2.jpg\" alt=\"可怕的如厕方式\" title=\"可怕的如厕方式\" width=\"5%\"></li>\n<li>禁止与豪猪、<a href=\"..\\access\\show.html?haer=1\" style=\"color: #FFAAAA;\" target=\"_blank\">TGT孩子</a>发生关系</li>\n</ol>\n<br>\n<br>\n目前已发现上述行为，一律禁止，违法的哈儿将受到<span style=\"color: #00FF00;\"><strong>[禁止显示]</strong></span>的惩罚。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
