@@ -35,9 +35,14 @@ if (idd == "0") {
 } else if (idd == "9") {
     document.getElementById("title").innerHTML = "已体检对象 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>已体检对象</h1>\n<h3 style=\"color: #7F7F7F\">体检合格后狂喜的哈儿</h3>\n<br>\n<p>\n姓名：&nbsp;已体检对象\n<br><br>\n年龄：&nbsp;14\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FFFF00\">B</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;9\n<br><br>\n信息：<br>这个哈儿体检合格后进入<a href=\"..\\door\\index.html\" style=\"color: #AAFFFF;\" target=\"_blank\">哈儿门</a>，随后拿着显示体检合格体检单到处乱跳，\n<br>\n导致哈儿们<span style=\"color: #FFAAAA;\">疯狂跳动了一个下午</span>，最后被我们用麻醉枪全部制服。\n<br>\n它有一个奇怪的癖好：喜欢在<a href=\"..\\door\\index.html\" style=\"color: #AAFFFF;\" target=\"_blank\">哈儿门</a>处反复进出，动作娴熟，每天能进<span style=\"color: #FFFFAA;\">100次以上</span>！\n<br>\n这导致它成为低智商哈儿，智力令人堪忧，但现在它已经对所有麻醉剂产生了抵抗力，目前我们无法阻止它智商骤降。\n<br><br><br>\n<img src=\"haer-img\\9.jpg\" alt=\"9\" title=\"已体检对象 - 9\" width=\"75%\">\n</p>";
-} else if (idd == "10") {
+}
+else if (idd == "10") {
     document.getElementById("title").innerHTML = "电话者 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>电话者</h1>\n<h3 style=\"color: #7F7F7F\">电话不停的哈儿</h3>\n<br>\n<p>\n姓名：&nbsp;电话者\n<br><br>\n年龄：&nbsp;9\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FF0000\">A</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;10\n<br><br>\n信息：<br>这个哈儿变哈的时候只有7岁，出于好奇进入。\n<br>\n当时他刚刚接触电话，对电话机很感兴趣，\n<br>\n于是他在这几年的时间里每天向外拨出至少300个电话，导致我们话费严重欠费，\n<br>\n我们便把电话机拿走了，\n<br>\n结果他联合<a href=\"show.html?haer=1\" target=\"_blank\" style=\"color: #FFAAAA;\">TGT孩子</a>造反，\n<br>\n我们只好给他电话，但是是<span style=\"color: #AAFFFF;\">内部电话，由计算机负责接电话，并播放祖安话语</span>。\n<br>\n这导致目前它有<span style=\"color: #FF0000;\">严重的暴力倾向，请勿靠近</span>！\n<br><br><br>\n<img src=\"haer-img\\10.jpg\" alt=\"10\" title=\"电话者 - 10\" width=\"75%\">\n</p>";
+}
+else if (idd == "11") {
+    document.getElementById("title").innerHTML = "考生 - 哈儿实验室数据库";
+    document.getElementById("main").innerHTML = "<h1>考生</h1>\n<h3 style=\"color: #7F7F7F\">考试中的美丽风景</h3>\n<br>\n<p>\n姓名：&nbsp;考生\n<br><br>\n年龄：&nbsp;13\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FFFF00\">B</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;11\n<br><br>\n信息：<br>他参加了一场考试，<span style=\"color: #FFFFAA;\">在考试中被发现是哈儿（疑似摔坏了脑子）</span>\n<br>\n他携带一台电子显微镜进入考场，开始做题，\n<br>\n做题期间为证明线段AB=AC+OD，\n<br>\n于是<span style=\"color: #FFAAAA;\">精准作图</span>，<span style=\"color: #FFAAAA;\">并使用电子显微镜数AB、AC、OD有多少个分子</span>，\n<br>\n被轰出考场后补考，几次三番不断地数，被关入高智商哈儿集训营。\n<br><br><br>\n<img src=\"haer-img\\11.jpg\" alt=\"11\" title=\"考生 - 11\" width=\"75%\">\n</p>";
 }
 else //注意第二年要更新哈儿的年龄！！！
 {
