@@ -44,6 +44,10 @@ else if (idd == "11") {
     document.getElementById("title").innerHTML = "考生 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>考生</h1>\n<h3 style=\"color: #7F7F7F\">考试中的美丽风景</h3>\n<br>\n<p>\n姓名：&nbsp;考生\n<br><br>\n年龄：&nbsp;13\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FFFF00\">B</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;11\n<br><br>\n信息：<br>他参加了一场考试，<span style=\"color: #FFFFAA;\">在考试中被发现是哈儿（疑似摔坏了脑子）</span>\n<br>\n他携带一台电子显微镜进入考场，开始做题，\n<br>\n做题期间为证明线段AB=AC+OD，\n<br>\n于是<span style=\"color: #FFAAAA;\">精准作图</span>，<span style=\"color: #FFAAAA;\">并使用电子显微镜数AB、AC、OD有多少个分子</span>，\n<br>\n被轰出考场后补考，几次三番不断地数，被关入高智商哈儿集训营。\n<br><br><br>\n<img src=\"haer-img\\11.jpg\" alt=\"11\" title=\"考生 - 11\" width=\"75%\">\n</p>";
 }
+else if (idd == "12") {
+    document.getElementById("title").innerHTML = "YJ Collector - 哈儿实验室数据库";
+    document.getElementById("main").innerHTML = "<h1>YJ Collector</h1>\n<h3 style=\"color: #7F7F7F\">仅次于TGT的恶魔</h3>\n<br>\n<p>\n姓名：&nbsp;YJ Collector\n<br><br>\n年龄：&nbsp;14\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;12\n<br><br>\n信息：<br>这是一个可怕的哈儿，有收集人体器官的癖好。\n<br>\n常在公寓、居民小区出没。\n<br>\n被收集器官的人都<span style=\"color:  #FFAAAA;\"><strong>死亡</strong></span>了。\n<br>过于恐怖，不披露更多信息。\n<br><br><br>\n<img src=\"haer-img\\12.jpg\" alt=\"12\" title=\"YJ Collector - 12\" width=\"75%\">\n</p>";
+}
 else //注意第二年要更新哈儿的年龄！！！
 {
     document.getElementById("title").innerHTML = "无档案 - 哈儿实验室数据库";
