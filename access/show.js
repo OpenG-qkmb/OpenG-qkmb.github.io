@@ -5,6 +5,7 @@ function getQ(name) {
     return null;
 }
 var idd = getQ("haer");
+document.getElementById("sid").value=idd;
 if (idd == "0") {
     document.getElementById("title").innerHTML = "夜车联盟 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>夜车联盟</h1>\n<h3 style=\"color: #7F7F7F\">C学校最大的恐怖组织。</h3>\n<br>\n<p>\n姓名：&nbsp;夜车联盟\n<br><br>\n年龄：&nbsp;1\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #00FFFF\">C</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;0\n<br><br>\n信息：<br>夜车联盟是由Y发起的恐怖组织。这个组织有10多人。其目的是在晚上写作业，然后到其他卧室来。学校规定禁止上述行为，但该组织的成员完全违反这些行为。这个组织中的每个人都有自己的呼叫标志。晚上，总司令Y先生安排时间让成员们在晚上写作业，并安排时间去其他卧室，未经许可。会员在门口时通常会发出奇怪的噪音，使人整夜睡不着觉。有些成员来到门口传达命令，并唤醒其他成员执行任务。这是C学校最大的恐怖组织。\n<br><br><br>\n<img src=\"haer-img\\0.jpg\" alt=\"0\" title=\"夜车联盟 - 0\" width=\"75%\">\n</p>";
