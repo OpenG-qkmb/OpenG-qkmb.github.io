@@ -89,6 +89,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="8")
+	{
+			var title="炸（zhá）药炸（zhá）毁人类";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月13日 12:46:04";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n请注意，炸（zhá）药是<strong style=\"color: #FFAAAA;\">十分危险</strong>的物质！\n<br><br>\n下面是一些事故事例：\n<dl>\n<li>一名运动员跳水时服用炸（zhá）药，炸（zhá）毁游泳场。</li>\n<li>一名男子尝试给炸（zhá）药通电，被炸（zhá）药爆炸（zhá），炸（zhá）至金黄，被路人以为是烧烤吃了。</li>\n<li>一名男子使用炸（zhá）药，炸（zhá）毁了他的房子，无家可归。</li>\n</dl>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
