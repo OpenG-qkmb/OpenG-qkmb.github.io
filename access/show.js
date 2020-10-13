@@ -48,6 +48,14 @@ else if (idd == "12") {
     document.getElementById("title").innerHTML = "YJ Collector - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>YJ Collector</h1>\n<h3 style=\"color: #7F7F7F\">仅次于TGT的恶魔</h3>\n<br>\n<p>\n姓名：&nbsp;YJ Collector\n<br><br>\n年龄：&nbsp;14\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;12\n<br><br>\n信息：<br>这是一个可怕的哈儿，有收集人体器官的癖好。\n<br>\n常在公寓、居民小区出没。\n<br>\n被收集器官的人都<span style=\"color:  #FFAAAA;\"><strong>死亡</strong></span>了。\n<br>过于恐怖，不披露更多信息。\n<br><br><br>\n<img src=\"haer-img\\12.jpg\" alt=\"12\" title=\"YJ Collector - 12\" width=\"75%\">\n</p>";
 }
+else if (idd == "13") {
+    document.getElementById("title").innerHTML = "-000 - 哈儿实验室数据库";
+    document.getElementById("main").innerHTML = "<h1>-000</h1>\n<h3 style=\"color: #7F7F7F\">反复自杀的哈儿</h3>\n<br>\n<p>\n姓名：&nbsp;-000\n<br><br>\n年龄：&nbsp;23\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;13\n<br><br>\n信息：<br>这个哈儿令人费解。\n<br>\n关押它的地方有一堵墙，在特定时间会因为错误而消失。\n<br>\n于是，-000走了出去，看见它自己在远处自杀了。\n<br>\n它感到很奇怪，便走过去看，看见了自己的尸体。\n<br>\n它突然明白了自己是哈儿，于是自杀了。\n<br>\n在自杀的几十秒前，墙的破洞内重新吸收了上一具尸体，恢复成走出墙外的-000的状态，\n<br>\n于是这个新的-000看见了上一个自己自杀了。\n<br>\n如此循环，直到墙再次恢复。\n<br>\n我们还有更多的信息，但是过于危险和诡异，\n<br>\n并可能使读者感到不适，已经删除。\n<br><br><br>\n<img src=\"haer-img\\13.jpg\" alt=\"13\" title=\"-000 - 13\" width=\"75%\">\n</p>";
+}
+else if (idd == "14") {
+    document.getElementById("title").innerHTML = "炸（zhá）药人 - 哈儿实验室数据库";
+    document.getElementById("main").innerHTML = "<h1>炸（zhá）药人</h1>\n<h3 style=\"color: #7F7F7F\">出生便是炸（zhá）药</h3>\n<br>\n<p>\n姓名：&nbsp;炸（zhá）药人\n<br><br>\n年龄：&nbsp;20\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FF0000\">A</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;14\n<br><br>\n信息：<br>它以炸（zhá）药为营养来源，出生时便会与母亲互相爆炸（zhá），\n<br>\n极其危险，容易被炸（zhá）至金黄！\n<br><br><br>\n<img src=\"haer-img\\14.jpg\" alt=\"14\" title=\"炸（zhá）药人 - 14\" width=\"75%\">\n</p>";
+}
 else //注意第二年要更新哈儿的年龄！！！
 {
     document.getElementById("title").innerHTML = "无档案 - 哈儿实验室数据库";
