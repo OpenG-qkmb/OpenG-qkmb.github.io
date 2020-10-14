@@ -101,6 +101,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="9")
+	{
+			var title="YJ Collector出现";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月14日 12:16:25";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n请注意（特别是搜捕队），最近发现<a style=\"color: #AAFFAA;\" href=\"..\\access\\show.html?haer=12\" target=\"_blank\">YJ Collector</a>出现在<strong style=\"color: #FF0000;\">[禁止显示]</strong>区域，请做好准备！\n<br>\n<br>\n附：YJ Collector资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=12\" width=\"75%\" height=\"500px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
