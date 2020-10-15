@@ -113,6 +113,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="10")
+	{
+			var title="紧急消息";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月15日 13:24:17";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n请搜捕队阅读，最近发现<a style=\"color: #AAFFAA;\" href=\"..\\access\\show.html?haer=12\" target=\"_blank\">YJ Collector</a>出现在<strong style=\"color: #FF0000;\">[禁止显示]</strong>区域，详细信息见文件下载。\n<br>\n<br>\n附一：YJ Collector出现的信息  <a style=\"color: #AAFFFF;\" target=\"_blank\" href=\"..\\downloads\\crys\\1.cry\">1.cry</a>，密码：<span style=\"background: #FFFFFF; color: #000000;\">haer</span>，\n<br>\n请使用HE2020解密。\n<br>\n<br>\n附二：YJ Collector资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=12\" width=\"75%\" height=\"500px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
