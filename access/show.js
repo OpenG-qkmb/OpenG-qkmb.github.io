@@ -1,4 +1,4 @@
-function getQ(name) {
+﻿function getQ(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]);
@@ -51,11 +51,15 @@ else if (idd == "12") {
 }
 else if (idd == "13") {
     document.getElementById("title").innerHTML = "-000 - 哈儿实验室数据库";
-    document.getElementById("main").innerHTML = "<h1>-000</h1>\n<h3 style=\"color: #7F7F7F\">反复自杀的哈儿</h3>\n<br>\n<p>\n姓名：&nbsp;-000\n<br><br>\n年龄：&nbsp;23\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;13\n<br><br>\n信息：<br>这个哈儿令人费解。\n<br>\n关押它的地方有一堵墙，在特定时间会因为错误而消失。\n<br>\n于是，-000走了出去，看见它自己在远处自杀了。\n<br>\n它感到很奇怪，便走过去看，看见了自己的尸体。\n<br>\n它突然明白了自己是哈儿，于是自杀了。\n<br>\n在自杀的几十秒前，墙的破洞内重新吸收了上一具尸体，恢复成走出墙外的-000的状态，\n<br>\n于是这个新的-000看见了上一个自己自杀了。\n<br>\n如此循环，直到墙再次恢复。\n<br>\n我们还有更多的信息，但是过于危险和诡异，\n<br>\n并可能使读者感到不适，已经删除。\n<br><br><br>\n<img src=\"haer-img\\13.jpg\" alt=\"13\" title=\"-000 - 13\" width=\"75%\">\n</p>";
+    document.getElementById("main").innerHTML = "<h1>-000</h1>\n<h3 style=\"color: #7F7F7F\">反复自杀的哈儿</h3>\n<br>\n<p>\n姓名：&nbsp;-000\n<br><br>\n年龄：&nbsp;未知\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;13\n<br><br>\n信息：<br>这个哈儿令人费解。\n<br>\n关押它的地方有一堵墙，在特定时间会因为错误而消失。\n<br>\n于是，-000走了出去，看见它自己在远处自杀了。\n<br>\n它感到很奇怪，便走过去看，看见了自己的尸体。\n<br>\n它突然明白了自己是哈儿，于是自杀了。\n<br>\n在自杀的几十秒前，墙的破洞内重新吸收了上一具尸体，恢复成走出墙外的-000的状态，\n<br>\n于是这个新的-000看见了上一个自己自杀了。\n<br>\n如此循环，直到墙再次恢复。\n<br>\n我们还有更多的信息，但是过于危险和诡异，\n<br>\n并可能使读者感到不适，已经删除。\n<br><br><br>\n<img src=\"haer-img\\13.jpg\" alt=\"13\" title=\"-000 - 13\" width=\"75%\">\n</p>";
 }
 else if (idd == "14") {
     document.getElementById("title").innerHTML = "炸（zhá）药人 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1>炸（zhá）药人</h1>\n<h3 style=\"color: #7F7F7F\">出生便是炸（zhá）药</h3>\n<br>\n<p>\n姓名：&nbsp;炸（zhá）药人\n<br><br>\n年龄：&nbsp;20\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #FF0000\">A</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;14\n<br><br>\n信息：<br>它以炸（zhá）药为营养来源，出生时便会与母亲互相爆炸（zhá），\n<br>\n极其危险，容易被炸（zhá）至金黄！\n<br><br><br>\n<img src=\"haer-img\\14.jpg\" alt=\"14\" title=\"炸（zhá）药人 - 14\" width=\"75%\">\n</p>";
+}
+else if (idd == "15") {
+    document.getElementById("title").innerHTML = "自行分解 - 哈儿实验室数据库";
+    document.getElementById("main").innerHTML = "<h1>自行分解</h1>\n<h3 style=\"color: #7F7F7F\">可怕如-000</h3>\n<br>\n<p>\n姓名：&nbsp;自行分解\n<br><br>\n年龄：&nbsp;未知\n<br><br>\n哈儿危险程度标码：&nbsp;<span style=\"color: #990000\">A+</span>\n<!--A+: #990000 A: #FF0000 B: #FFFF00 C : #00FFFF D: #00FF00-->\n<br><br>\n哈儿码：&nbsp;15\n<br><br>\n它就像<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"show.html?haer=13\">-000</a>一样可怕。\n<br>\n它要移动自己，会将自己分解掉，并在另外位置重新复制一个自己。\n<br>\n这是它自己吗？还是什么？\n<br>\n目前它已经将3名研究员分解，不披露更多信息。\n<br><br><br>\n<img src=\"haer-img\\15.jpg\" alt=\"15\" title=\"自行分解 - 15\" width=\"75%\">\n</p>";
 }
 else //注意第二年要更新哈儿的年龄！！！
 {
