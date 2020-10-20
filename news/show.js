@@ -125,6 +125,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="11")
+	{
+			var title="哈儿大礼包";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月20日 16:40:03";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n哈儿大礼包现在已经可以购买。\n<br>\n费用：￥100.00元\n<br>\n包含：<a style=\"color: #FFAAAA;\" target=\"blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>（繁殖阶段）100个（可生长出10000个）\n<br>\n只要有光照射即可自行拆毁笼子爬出。\n<br>\n如需购买请邮件并附上购买激活码。\n<br>\n附件：<a style=\"color: #FFAAAA;\" target=\"blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=1\" width=\"75%\" height=\"400px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
