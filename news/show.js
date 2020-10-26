@@ -137,6 +137,18 @@
 			test=test.replace(/\[idd]/g,1);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="12")
+	{
+			var title="哈儿作画";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月26日 11:19:26";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n目前<a href=\"..\\access\\show.html?haer=7\" style=\"color: #AAFFAA;\" target=\"_blank\">小哈儿</a>已经开始学习作画，\n<br>\n下周就将展示它的一幅巨作《TGT孩子吃炸（zhá）药图》，敬请期待！\n<br>\n附件：小哈儿资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=7\" width=\"75%\" height=\"300px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
