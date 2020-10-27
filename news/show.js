@@ -149,6 +149,19 @@
 			test=test.replace(/\[idd]/g,4);
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="13")
+	{
+			var title="大家好，我是TGT孩子";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月27日 12:59:25";
+			document.getElementById("user").innerHTML="[User-5]";
+			document.getElementById("mainb").innerHTML="<p>\n大家好，我是<a href=\"..\\access\\show.html?haer=1\" style=\"color: #FFAAAA;\" target=\"_blank\">TGT孩子</a>！\n<br>\n我已经开始学习，\n<br>\n并立志成为一个高智商哈儿！\n<br>\n我爱读书，这是我看到的两段好句：\n<br>\n<dl style=\"color: #AAFFAA;\">\n<li>眼睛鼓大点，认清串并联。\n<br>\n串联分压电流等，并联分流电压同。</li>\n<br>\n<li>你[Uns]再说话，我就把你的[Uns]没收了！！！</li>\n</dl>\n<br>\n我最近发现了一些不好的事情，非常不好。\n<br>\n请参阅文件：不好的事情  <a style=\"color: #AAFFFF;\" target=\"_blank\" href=\"..\\downloads\\crys\\2.cry\">2.cry</a>，密码：<span style=\"background: #FFFFFF; color: #000000;\">tgt</span>\n<br>\n<br>\n附件：TGT孩子资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=1\" width=\"75%\" height=\"300px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,5);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
