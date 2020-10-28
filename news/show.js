@@ -162,6 +162,19 @@
 			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="14")
+	{
+			var title="TGT孩子游玩事件";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月28日 11:44:08";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n近日，TGT孩子在游玩中发生一些不良事件。\n<br>\n事件列表：<dl style=\"color: #0000cc;\">\n<li>将鸭梨和炸（zhá）药嫁接在一起，形成一株抗病能力弱、果实小、味道涩、破坏能力强的炸（zhá）梨。</li>\n<li>帮路人挑粪，走到一半太累了，停下来喝了很久。</li>\n<li>制作了自动炸（zhá）毁器炸（zhá）毁大量路人，原理图如下：\n<br>\n<img src=\"newsimgs\\3.jpg\" width=\"32%\" title=\"自动炸（zhá）毁器\" alt=\"自动炸（zhá）毁器\"></li>\n</dl>\n现在公示以惩罚！\n<br>\n<br>\n附件：TGT孩子资料\n<br>\n<iframe src=\"..\\access\\show.html?haer=1\" width=\"75%\" height=\"300px\"></iframe>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
