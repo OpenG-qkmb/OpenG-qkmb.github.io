@@ -175,6 +175,19 @@
 			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="15")
+	{
+			var title="一哈儿成功消灭造反派";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年10月30日 11:55:11";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n近日，部分哈儿造反，企图消灭哈儿实验室。\n<br>\n敌方共3名哈儿，武器装备：无（空手），\n<br>\n在[Uns]地区几乎遇到我方3万<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>组成的安保巡逻队，\n<br>\n一名哈儿成功阻止交火并以自己的单个哈儿的力量消灭了敌方3名哈儿组成的大军。\n<br>\n具体事件如下：\n<br>\n<br>\n<span style=\"color: #AAFFAA; background: #000000; text-align: center;\">\n敌军3名哈儿行走于山坡，一名哈儿正在山顶里的木屋里冲澡，\n<br>\n水漏出来形成一条宽约30cm，深约0.8mm的溪流，\n<br>\n敌方3名哈儿担心溺水而死，\n<br>\n于是肩搭着肩一起抬脚跨越，\n<br>\n结果3名哈儿同时踩进水里，\n<br>\n全部滑倒，三个头一起撞在石头上，\n<br>\n这导致敌方3名哈儿组成的大军全军覆没，\n<br>\n成功避免与我方3万<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>组成的安保巡逻队交火。\n</span>\n<br>\n<br>\n这名哈儿事后被立一等功，并获得与3万<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>跳舞的机会。\n<br>\n在场的一名目击者说：“这个哈儿真[Uns]！”\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
