@@ -188,6 +188,20 @@
 			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="16")
+	{
+			var title="《TGT孩子吃炸（zhá）药图》";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年11月23日 11:16:32";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n这是由<a style=\"color: #AAFFAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=7\">小哈儿</a>绘制的《<a style=\"color: #cc0000;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>吃<a style=\"color: #FF00FF;\" target=\"_blank\" href=\"..\\access\\show.html?haer=8\">[FM]</a>图》，请欣赏。\n<br>\n注：小哈儿画完后被TGT孩子咬去[Uns]。\n<br>\n<img src=\"newsimgs\\4.jpg\" title=\"《TGT孩子吃炸（zhá）药图》\" alt=\"《TGT孩子吃炸（zhá）药图》\" width=\"75%\">\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[FM]/g,"炸（zhá）药");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
