@@ -1,3 +1,3 @@
 OpenG-qkmb
 ======
-<p style="color: #5f6464">37</p>
+<span style="color: #FF0000">*38*</span>

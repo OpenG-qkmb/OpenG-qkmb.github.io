@@ -51,7 +51,7 @@ if (idd == "0") {
 	age=13;
 	des="狂妄自大的哈儿";
 	dgs=2;
-	info="在<a href=\"..\\news\\3.html\" style=\"color: #FFAAAA;\" target=\"_blank\">高等智商哈儿实验</a>（见文章底部附录）中，橄榄先生是失败品，变成了狂妄自大的低智商哈儿。他甚至认为哈儿实验室创始人<a href=\"..\\user\\show.html?id=1\" style=\"color: #FFFF00;\" target=\"_blank\">[User-1]</a>是哈儿，而自己是治疗后者的医师！\n<br>\n<span style=\"color: #FFFFAA;\">几乎所有哈儿都讨厌他（包括上述实验失败的狂妄自大的废弃哈儿！！）</span>，因为他总是认为自己是正常人而看不起其它哈儿。\n<br>\n该哈儿已被定义为废弃哈儿，目前已成功返回总部。因此删除对其外貌的叙述。\n<br>若再次见到请勿与其交流，并报告我们！\n<br><br><br>\n<br><br><br>\n<span style=\"font-size: 5px\">附：高等智商哈儿实验说明<br></span>\n<iframe src=\"..\\news\\3.html\" width=\"66%\" height=\"300px\"></iframe>";
+	info="在<a href=\"..\\news\\3.html\" style=\"color: #FFAAAA;\" target=\"_blank\">高等智商哈儿实验</a>（见文章底部附录）中，橄榄先生是失败品，变成了狂妄自大的低智商哈儿。他甚至认为哈儿实验室创始人<a href=\"..\\user\\show.html?id=1\" style=\"color: #FFFF00;\" target=\"_blank\">[User-1]</a>是哈儿，而自己是治疗后者的医师！\n<br>\n<span style=\"color: #FFFFAA;\">几乎所有哈儿都讨厌他（包括上述实验失败的狂妄自大的废弃哈儿！！）</span>，因为他总是认为自己是正常人而看不起其它哈儿。\n<br>\n该哈儿已被定义为废弃哈儿，目前已成功返回总部。因此删除对其外貌的叙述。\n<br>\n见到它的哈儿都被吓得跟它一样了，例如<a href=\"show.html?haer=17\" target=\"_blank\" style=\"color: #AAFFAA;\">已扭曲矩形对象</a>。\n<br>\n若再次见到请勿与其交流，并报告我们！\n<br><br><br>\n<br><br><br>\n<span style=\"font-size: 5px\">附：高等智商哈儿实验说明<br></span>\n<iframe src=\"..\\news\\3.html\" width=\"66%\" height=\"300px\"></iframe>";
 } else if (idd == "7") {
     name="小哈儿";
 	age=12;

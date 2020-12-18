@@ -202,6 +202,20 @@
 			test=test.replace(/\[FM]/g,"炸（zhá）药");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="17")
+	{
+			var title="小哈儿的哈儿文";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年12月18日 17:10:24";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n<a style=\"color: #AAFFFF;\" target=\"_blank\" href=\"..\\access\\show.html?haer=7\">小哈儿</a>发布了一份由它自创的哈儿语文件。\n<br>\n注：<strong style=\"color: #CC0000;\">此文件是小哈儿自行创作，与哈儿实验室无关</strong>！\n<br>\n下载链接：<a href=\"dn\\News-2020-12-18.pdf\" target=\"_blank\" download=\"News-2020-12-18-download-by-button.pdf\"><button>下载</button></a>\n<br>\n<embed src=\"dn\\News-2020-12-18.pdf\" width=\"75%\" height=\"500px\"></embed>\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[FM]/g,"炸（zhá）药");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
