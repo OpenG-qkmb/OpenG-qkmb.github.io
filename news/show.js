@@ -216,6 +216,20 @@
 			test=test.replace(/\[FM]/g,"炸（zhá）药");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="18")
+	{
+			var title="紧急信息-关于THVH-982实验失误";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2020年12月21日 17:13:15";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n近日在[Uns]地区发现由哈儿实验室研发的THVH-982泄露，\n<br>\n截至21日中午12:00，已有<strong style=\"color: #FF0000\">89756</strong>个哈儿感染，\n<br>\n其中就地击毙和回炉处理的共<strong style=\"color: #FF0000\">88342</strong>个，\n<br>\n仍有<strong style=\"color: #FF0000\">1414</strong>个在逃。\n<br>\n更多信息见内部私信。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[FM]/g,"炸（zhá）药");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
