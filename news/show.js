@@ -230,6 +230,23 @@
 			test=test.replace(/\[FM]/g,"炸（zhá）药");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="19")
+	{
+			var title="关于2021年的注意事项";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年1月1日 00:00:00";
+			document.getElementById("user").innerHTML="[User-1]";
+			document.getElementById("mainb").innerHTML="<p>\n2020年已经过去了，在这一年里，我们累积获得<a style=\"color: #AAFFAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>[Gt1]90274772696[Gt2]个（截至2020年12月31日23:30）；[br]我们累积获得<a style=\"color: #AAFFFF;\" target=\"_blank\" href=\"..\\access\\show.html?haer=7\">小哈儿</a>[Gt1]90274797233[Gt2]个（截至2020年12月31日23:45）；[br]累计生产了<a style=\"color: #FFFFAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=8\">[FM]</a>[Gt1]291645.97[Gt2]吨（截至2020年12月31日23:00）。[br]在此对哈儿实验室的工作人员和哈儿们给予高度评价。[br][br]于此提出对2021年的要求：[br]<ol><li>累计获得TGT孩子[Gt1]100000000000[Gt2]个以上</li><li>累计获得小哈儿[Gt1]100000002000[Gt2]个以上</li><li>累计生产[FM][Gt1]300000.00[Gt2]吨以上</li><li>保证累计不超过[Gt1]1200[Gt2]次哈儿暴动或叛乱</li><li>[Gt1]全面禁止[Gt2]哈儿乱交行为，这样产生的新品种难以控制，可以施行[Gt1]STD-325[Gt2]</li></ol>以下无正文，修改无效。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,1);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[FM]/g,"炸（zhá）药");
+			test=test.replace(/\[Gt1]/g,"<strong style=\"color: #FF0000;\">");
+			test=test.replace(/\[Gt2]/g,"</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
