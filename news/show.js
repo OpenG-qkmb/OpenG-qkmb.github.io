@@ -247,6 +247,21 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="20")
+	{
+			var title="农历新年的重要讲话";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年2月11日 16:00:00";
+			document.getElementById("user").innerHTML="[User-5]";
+			document.getElementById("mainb").innerHTML="<p>\n本消息仅包含如下视频（TGT孩子新年讲话）[br]<video controls autoplay width=\"45%\"><source src=\"https://github.com/OpenG-qkmb/OpenG-qkmb.github.io/releases/download/v0.0.1/2021.mp4\"></video>[br]不限制下载。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,5);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
+
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
