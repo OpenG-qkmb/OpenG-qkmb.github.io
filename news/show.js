@@ -261,7 +261,20 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
-
+	else if(idd=="21")
+	{
+			var title="事故通报";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年3月2日 17:06:12";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n在2021年3月2日 11:30:00开始的2021030249实验发生事故，[br]该实验位于哈儿实验室东南方向的一处树林中。[br]存放<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>的一个高压容器发生爆炸。[br]<strong style=\"color: #FF0000;\">239</strong>个TGT孩子下落不明。[br]该事故目前正在调查中，请无关人员在<strong style=\"color: #FF0000;\">2021年4月1日</strong>前不要到达哈儿实验室周围<strong style=\"color: #FF0000;\">15km</strong>以内的区域，[br]我们会使用[Uns]方法处理出逃哈儿，并使用铁丝网禁止进入，[br]造成的不便见谅。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
