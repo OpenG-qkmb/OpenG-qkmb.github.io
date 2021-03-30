@@ -275,6 +275,20 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="22")
+	{
+			var title="讣告";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年3月16日 09:17:33";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n我们敬爱的哈儿实验室创始人、哈儿实验室总负责人、哈儿实验室最高苏维埃主席——[br]<a style=\"color: #FFFFAA\" href=\"..\\user\\show.html?id=1\" target=\"_blank\">[User-1]</a>先生于今晨08:19:03在哈儿实验室紧急治疗中心去世，享年[Uns]岁。[br][User-1]于<a href=\"show.html?news=21\" target=\"_blank\" style=\"color: #FFAAAA;\">3月2日的事故</a>中被<a style=\"color: #FFAAAA;\" target=\"_blank\" href=\"..\\access\\show.html?haer=1\">TGT孩子</a>追赶，[br]开车撤离时车从悬崖落下，今日不治身亡。[br]在此沉痛悼念。\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
