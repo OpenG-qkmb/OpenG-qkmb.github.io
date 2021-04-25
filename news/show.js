@@ -289,6 +289,20 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="23")
+	{
+			var title="新一任领导人";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年3月16日 09:17:33";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n新的哈儿实验室苏维埃主席团主席已经产生——<a style=\"color: #FFFFAA\" href=\"..\\user\\show.html?id=6\" target=\"_blank\">[User-6]</a>先生。[br]他是我们伟大的领袖，继承了哈儿实验室的光辉传统。[br]他将带领着哈儿实验室进入新时代！\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
