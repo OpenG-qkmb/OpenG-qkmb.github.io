@@ -294,7 +294,7 @@
 			var title="新一任领导人";
 			document.getElementById("title").innerHTML=title+" - 最新";
 			document.getElementById("titleh1").innerHTML=title;
-			document.getElementById("ttime").innerHTML="2021年3月16日 09:17:33";
+			document.getElementById("ttime").innerHTML="2021年4月25日 09:10:57";
 			document.getElementById("user").innerHTML="[User-4]";
 			document.getElementById("mainb").innerHTML="<p>\n新的哈儿实验室苏维埃主席团主席已经产生——<a style=\"color: #FFFFAA\" href=\"..\\user\\show.html?id=6\" target=\"_blank\">[User-6]</a>先生。[br]他是我们伟大的领袖，继承了哈儿实验室的光辉传统。[br]他将带领着哈儿实验室进入新时代！\n</p>";
 			var test=document.getElementById("main").innerHTML;
@@ -303,8 +303,23 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="24")
+	{
+			var title="哈儿语相关事宜 HAER LANGU ABET DORIV";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年5月15日 20:51:18";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n哈儿语言研究小组已成功根据哈儿当地语言研发了拉丁字母的哈儿语，[br]目前正在推广和应用于本网站。[br]目前只在少部分页面上施行，接下来几个月会全部施行至哈儿实验室数据库。[br]我们保留使用西里尔字母的可能性。[br]另外，我们删除了毫无意义的下载中心，但其文件可以从链接继续被访问，其页面将被废除。\n</p><p>\nHAER LANGU STUDA DRIGVS NEWILAV POBEDA SPEDTREK HAER MESTNIV LANGU YEFIDROV LATIN PISROZ D HAER LANGU,[br]LIS VEDAN ZIKK BEV VEDAROV TET VEBAT.[br]LIS OKKRU T NIHV VEBAT WUK VEDAN, BUK GOTERA VLOTA WILAV ALAK VEDAN HAER LABOTIY DATV.[br]IYI VEEBET VEDAN KIRILIVA PISROZ D MAY.[br]DRUGIV, IYI OTMENIT NESSMI D NAGRUZOVA SUK, VET TET TEKST RUZ G SAYIT WORETNED WASEV YEVAROV, TET VEBAT WILAV WASEV OTMENIT.\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[Unsh]/g,"<strong style=\"color: #FF0000;\">[NERUZ UDSAFOZ]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
-		document.getElementById("title").innerHTML="未选择最新消息 - 最新";
-		document.getElementById("mainb").innerHTML="<h1 style=\" color: #FFAAAA;\">未选择最新消息</h1>";
+		document.getElementById("title").innerHTML="未选择最新消息 - 最新<br>NE ROLEKT  VOE NEV - VOE NEV";
+		document.getElementById("mainb").innerHTML="<h1 style=\" color: #FFAAAA;\">未选择最新消息<br>NE ROLEKT  VOE NEV!</h1>";
 	}

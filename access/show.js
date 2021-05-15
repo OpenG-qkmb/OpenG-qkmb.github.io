@@ -132,11 +132,11 @@ else //注意第二年要更新哈儿的年龄！！！
     document.getElementById("title").innerHTML = "无档案 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1 style=\" color: #FFAAAA;\">没有关于这个哈儿的档案</h1>";
 }
-document.getElementById("title").innerHTML = name+" - 哈儿实验室数据库";
+document.getElementById("title").innerHTML = name+" - 哈儿实验室数据库 HAER LABOTIY DATV";
 document.getElementById("t1").innerHTML =document.getElementById("t2").innerHTML =name;
 document.getElementById("des").innerHTML =des;
 document.getElementById("img").alt = document.getElementById("id1").innerHTML =idd;
-document.getElementById("age").innerHTML =age;
+document.getElementById("age").innerHTML =Number(age)+Number(1);
 document.getElementById("info").innerHTML =info;
 document.getElementById("img").src ="haer-img\\"+idd+".jpg";
 document.getElementById("img").title=name+" - "+idd;
