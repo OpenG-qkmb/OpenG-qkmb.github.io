@@ -318,6 +318,21 @@
 			test=test.replace(/\[br]/g,"\n<br>\n");
 			document.getElementById("main").innerHTML=test;
 	}
+	else if(idd=="25")
+	{
+			var title="哈儿国战时中央委员会 HAER UFEKKE POB KLOTA SUK ODEWZ";
+			document.getElementById("title").innerHTML=title+" - 最新";
+			document.getElementById("titleh1").innerHTML=title;
+			document.getElementById("ttime").innerHTML="2021年6月6日 23:00:00";
+			document.getElementById("user").innerHTML="[User-4]";
+			document.getElementById("mainb").innerHTML="<p>\n哈儿国最高苏维埃昨日通过议案，正式组建哈儿国战时中央委员会。[br]其中，哈儿共产党中央委员会总书记兼哈儿实验室苏维埃主席兼哈儿国国防部长兼战时哈儿工人红军总司令<a style=\"color: #AAFFAA\" href=\"..\\user\\show.html?id=6\" target=\"_blank\">[User-6]</a>同志任哈儿国战时中央委员会主席。[br]哈儿国最高苏维埃主席团主席TGT孩子-3674117及哈儿国部长会议主席任副主席。[br]另外还有7名委员：TGT孩子-3601209、TGT孩子-5411648、TGT孩子-7168091、小哈儿-3601209、小哈儿-5411648、小哈儿-7168091、空洞孩子-36114。[br]本委员会在哈儿国进入紧急状态或战时状态时掌控国家一切权力。[br]昨日通过的另一项议案，宣布哈儿国自即日起进入战时状态，估计在12月前能够解除。[br]另通知：哈儿共产党第二次全国代表大会将于6月15日召开。\n</p><p>\nHAER UFEKKE VOE AK SOVET NOS FEHIU YOT OST, TREKVDOG BILID HAER UFEKKE POB KLOTA SUK ODEWZ.[br]SUK, HAER KOMUTA PARITY SUK ODEWZ ALAKROVEZ BEV HAER LABOTIY SOVET YEMAN BEV HAER UFEKKE POBVEDA FORETONZ BEV POB KLOTA HAER WOREV SEKHI POBPETA POBPETAZIZ <a style=\"color: #AAFFAA\" href=\"..\\user\\show.html?id=6\" target=\"_blank\">[User-6]</a> TOVARISHCH PETAS HAER UFEKKE POB KLOTA SUK ODEWZ YEMAN. [br]HAER UFEKKE VOE AK SOVET YEMANI YEMAN TGT KID-3674117 BEV HAER UFEKKE FORETONZ ZIZST YEMANI PETAS TANVED YEMAN.[br]DRUGIV SN HE 7 (GOGIZ) ODEW: TGT KID-3601209, TGT KID-5411648, TGT KID-7168091, SIN HAER-3601209, SIN HAER-5411648, SIN HAER-7168091, RUL KID-36114.[br]TET ODEWZ T HAER UFEKKE IGZ DEKVEDAN VEDANZ ORE POB VEDANZ KLOTA DUHZ UFEKKE ALAK POUMON.[br]NOS FEHIU D DRUGIV YOT OST, MU HAER UFEKKE G TET KLOTA RUHZ IGZ POB VEDANZ, TSONRAZ T 12 VLOTA (YOT-GOTA-VLOTA) FUK RUZ OTMENIT.[br]DRUGIV MU: HAER KOMUTA PARITY PARIZ 1 (PARIZ YOT) WILAV T 6 VLOTA 15 DLOTA (GOTU-VLOTA YOT-GOTI-VLOTA) WORETNED.\n</p>";
+			var test=document.getElementById("main").innerHTML;
+			test=test.replace(/\[idd]/g,4);
+			test=test.replace(/\[Uns]/g,"<strong style=\"color: #FF0000;\">[禁止显示]</strong>");
+			test=test.replace(/\[Unsh]/g,"<strong style=\"color: #FF0000;\">[NERUZ UDSAFOZ]</strong>");
+			test=test.replace(/\[br]/g,"\n<br>\n");
+			document.getElementById("main").innerHTML=test;
+	}
 	else
 	{
 		document.getElementById("title").innerHTML="未选择最新消息 - 最新<br>NE ROLEKT  VOE NEV - VOE NEV";
