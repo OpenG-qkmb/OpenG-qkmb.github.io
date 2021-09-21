@@ -6,5 +6,3 @@ function test()
 {
 	return 111;
 }
-
-window.location.href="https://hssrgov.github.io/";
