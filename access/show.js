@@ -1,6 +1,4 @@
-window.location.href="https://hssrgov.github.io/access/";
-
-function getQ(name) {
+﻿function getQ(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]);
@@ -133,6 +131,7 @@ else //注意第二年要更新哈儿的年龄！！！
 {
     document.getElementById("title").innerHTML = "无档案 - 哈儿实验室数据库";
     document.getElementById("main").innerHTML = "<h1 style=\" color: #FFAAAA;\">没有关于这个哈儿的档案</h1>";
+	window.location.href="https://hssrgov.github.io/access/";
 }
 document.getElementById("title").innerHTML = name+" - 哈儿实验室数据库 HAER LABOTIY DATV";
 document.getElementById("t1").innerHTML =document.getElementById("t2").innerHTML =name;
@@ -144,3 +143,4 @@ document.getElementById("img").src ="haer-img\\"+idd+".jpg";
 document.getElementById("img").title=name+" - "+idd;
 document.getElementById("dg").innerHTML=dg[dgs];
 document.getElementById("dg").style="color: "+dgclr[dgs]+";";
+window.location.href="https://hssrgov.github.io/access/?haer="+idd;
