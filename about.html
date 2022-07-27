@@ -1,31 +1,47 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>关于我们 - 哈儿</title>
-<script>
-	window.location.href="index.html";
-</script>
-<link rel="shortcut icon" href="icon.ico">
-</head>
-<body style="background: #000000">
-<div style="text-align: center; color: #FFFFFF;" id="main">
-<a style="color: #FFFFFF" href="index.html" target="_blank">主页</a>
-<h1>关于我们</h1>
-<p>
-我们是收集一些智商极低的类人生物并收容、实验的组织，当然<span style="color: #FFAAAA;">请勿完全相信我们提供的资料，因为绝大多数资料来自目击者的描述，并未取得实体，我们无法确定真实性</span>。
-<br>
-<p>欢迎告诉我们一些关于智商极低的类人生物的故事，我们非常愿意记录它们！</p>
-<p>当然，<span style="color: #FFAAAA;">非法内容是绝对不被允许的</span>，如果您没有注册账号，我们会无视您的投稿；如果您注册了账号，我们将会封禁您的账号，您将<span style="color: #FFAAAA;">永远无法登陆</span>您的账号。</p>
-<p>创建者：<a style="color: #FFFF00" href="user\show.html?id=1" target="_blank">[User-1]</a>
-  <a style="color: #FFFF00" href="user\show.html?id=2" target="_blank">[User-2]</a>
-<a style="color: #FFFF00" href="user\show.html?id=3" target="_blank">[User-3]</a></p>
-</p>
-<hr>
-<p id="about"></p>
-<script src="check.js"></script>
-<script src="user\show.js"></script>
-<script>cngbycs(10);</script>
+---
+layout: page
+title: "关于"
+description: "Пролетарии всех стран, соединяйтесь!"
+header-img: "img/about-bg.jpg"
+multilingual: true
+---
+
+{% include multilingual-sel.html %}
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+    {{ about_zh | markdownify }}
 </div>
-</body>
-</html>
+
+<!-- Russian Version (We need a translator) -->
+<div class="en post-container">
+    {% capture about_en %}{% include about/en.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
