@@ -82,7 +82,7 @@
                     {% comment %} always create a h2 for keeping the margin {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     <span class="meta">由 {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
-                        发布于 {{ page.date | date: "%B %-d, %Y" }}</span>
+                        发布于 {{ page.date | date: "%-m - %-d, %Y" }}</span>
                 </div>
             </div>
         </div>
