@@ -1,19 +1,19 @@
 # Site settings
-title: 哈儿实验室
-SEOTitle: 哈儿实验室
+title: 哈儿科普
+SEOTitle: 哈儿科普
 header-img: img/home-bg.jpg
-email: radiumvs@foxmail.com
-description: "哈儿实验室的官方网站。Это официальный сайт Лаборатории Хаера. Гэта афіцыйны сайт Лабараторыі Хаера. Це офіційний сайт Лабораторії Хаера."
-keyword: "哈儿, 哈儿实验室, haer, haer lab, laboratoriya haera, laboratorija haera, хаер, лаборатория хаера"
-url: "https://hssrgov.github.io/"			  # your host, for absolute URL
+# email: radiumvs@foxmail.com
+description: "哈儿实验室管制实验部的对外发布网站。"
+keyword: "哈儿, 哈儿实验室, 管制实验部, 哈儿科普, haer, haer lab, laboratoriya haera, laboratorija haera, хаер, лаборатория хаера"
+url: "https://openg-qkmb.github.io/"			  # your host, for absolute URL
 baseurl: ""							 # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
-RSS: false
-github_username:	hssrgov
+RSS: false 
+# github_username: hssrgov
 
 
 
@@ -21,8 +21,8 @@ github_username:	hssrgov
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+paginate: 15
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md","_deleted"]
 anchorjs: true						  # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN  
@@ -50,8 +50,8 @@ kramdown:
 
 # Sidebar settings
 sidebar: true						   # whether or not using Sidebar.
-sidebar-about-description: "哈儿实验室——让正常人变成哈儿，让哈儿快乐生活。"
-sidebar-avatar: https://github.com/hssrgov.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "哈儿实验室管制实验部"
+sidebar-avatar: https://khayer.cn/img/icon_wechat.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -75,8 +75,12 @@ page-mathjax: false
 # Friends
 friends: [
 	{
+		title: "哈儿实验室部长会议",
+		href: "https://khayer.cn/"
+	},
+	{
 		title: "哈儿实验室01分部",
-		href: "https://mrhaer.github.io"
+		href: "https://mrhaer.github.io/"
 	},
 	{
 		title: "伪证大典官网",
