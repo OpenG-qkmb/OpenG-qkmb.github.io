@@ -23,7 +23,7 @@ description: "全世界无产者，联合起来！"
         </div>
     </a>
     <p class="post-meta">
-        由 {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} 发布于 {{ post.date | date: "%Y年%-m月%-d日" }}
+        由{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}发布于{{ post.date | date: "%Y年%-m月%-d日" }}
     </p>
 </div>
 <hr>
