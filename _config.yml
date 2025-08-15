@@ -1,10 +1,10 @@
 # Site settings
-title: 危险哈儿数据库
-SEOTitle: 危险哈儿数据库
+title: 炼钢党
+SEOTitle: 炼钢党
 header-img: img/home-bg.jpg
 # email: radiumvs@foxmail.com
-description: "哈儿实验室危险哈儿数据库"
-keyword: "哈儿, 哈儿实验室, 危险哈儿数据库, 哈儿科普, haer, haer lab, laboratoriya haera, laboratorija haera, хаер, лаборатория хаера"
+description: "炼钢党"
+keyword: "炼钢党,钢铁, 发电, Steelmaking Party, steelmaking, steel, Сталеплавильная Партия"
 url: "https://openg-qkmb.github.io/"			  # your host, for absolute URL
 baseurl: ""							 # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -50,7 +50,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true						   # whether or not using Sidebar.
-sidebar-about-description: "哈儿实验室联合管制实验委员会"
+sidebar-about-description: "炼钢党"
 sidebar-avatar: https://khayer.cn/img/icon_wechat.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
