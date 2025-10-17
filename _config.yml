@@ -1,10 +1,10 @@
 # Site settings
-title: 炼钢党
-SEOTitle: 炼钢党
+title: 你好，人类
+SEOTitle: OpenG-qkmb的博客
 header-img: img/home-bg.jpg
 # email: radiumvs@foxmail.com
-description: "炼钢党"
-keyword: "炼钢党,钢铁, 发电, Steelmaking Party, steelmaking, steel, Сталеплавильная Партия"
+description: "博客 - OpenG-qkmb"
+keyword: "博客, 人类, OpenG-qkmb, 神圣的言语, 哈儿, 哈儿实验室, 炼钢党"
 url: "https://openg-qkmb.github.io/"			  # your host, for absolute URL
 baseurl: ""							 # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -50,7 +50,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true						   # whether or not using Sidebar.
-sidebar-about-description: "炼钢党"
+sidebar-about-description: "OpenG-qkmb"
 sidebar-avatar: https://khayer.cn/img/icon_wechat.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -74,20 +74,20 @@ page-mathjax: false
 
 # Friends
 friends: [
-	{
-		title: "哈儿实验室部长会议",
-		href: "https://khayer.cn/"
-	},
-	{
-		title: "哈儿实验室01分部",
-		href: "https://mrhaer.github.io/"
-	},
+	# {
+	# 	title: "哈儿实验室",
+	# 	href: "https://khayer.cn/"
+	# },
+	# {
+	# 	title: "哈儿实验室01分部",
+	# 	href: "https://mrhaer.github.io/"
+	# },
 	{
 		title: "伪证大典官网",
 		href: "https://weizhengcom.github.io/"
-	},
-	{
-		title: "FreePhobia",
-		href: "https://freephobia.github.io/"
-	}
+	} # ,
+	# {
+	# 	title: "FreePhobia",
+	# 	href: "https://freephobia.github.io/"
+	# }
 ]
