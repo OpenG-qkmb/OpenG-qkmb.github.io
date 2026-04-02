@@ -51,7 +51,7 @@ kramdown:
 # Sidebar settings
 sidebar: true						   # whether or not using Sidebar.
 sidebar-about-description: "OpenG-qkmb"
-sidebar-avatar: https://khayer.cn/img/icon_wechat.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://khayer.cn/img/qkmb.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
