@@ -1,3 +1,11 @@
-# About this site
+# The Art of Thinking
 
-Updating...
+An old man, on a rainy day, in a thatched hut across from a forest and a path, was electrocuted by two donkeys behind the hut—they pushed against and connected two huge electrodes. So we decided to hold our morning English reading session in his hut.
+
+As a matter of fact, riding a bike too fast is not a good idea. When you crash into the railway tracks and die on the spot, your classmate will examine your body and say, “No hope left—his skull is shattered.” Then he’ll leave you there, go back to school, and report to the teacher. Upon hearing the news, the teacher will calmly and naturally cross your name off the roster. That’s exactly why we refuse to have half of our school building converted into a department store facing a tangle of railway tracks.
+
+If for any reason you need to go to a police station, be sure to enter the correct, official police station—not the so-called “police station.” When you step into that strange place, you’ll see a bunch of children taking IQ tests, and people trying to turn themselves in while banging their heads with doors padded with cushions. The “criminals” live in clean, spacious, luxurious, and open quarters, but each person is assigned nothing but an empty squat-toilet cubicle, where they are locked in for at least 24 hours a day. For this reason, we strongly advise residents near the railway to remind their upstairs neighbors every night not to flick the lights on and off repeatedly, or they may risk being locked up for a long time in the kind of place described above.
+
+During assemblies, don’t smelt metal, and don’t mock others—because that might get you picked up by a pure red vintage car, which will drive you far away along a grassy dirt road. In the boiler room, be absolutely sure: only water that comes out of the tap can be used.
+
+You were caught in a flood during a dictation test and ended up on a bus. You and your friends burned down a castle, which cut off its water and electricity. Under a streetlamp, travelers are guided toward the enormous shadow of a castle staircase in the dark. Still, when a student walks down the dim, narrow hallway after school, he will see an abandoned wooden desk in the elevator lobby and hear knocking sounds. While arranging things in a dark wooden house, his visitor arrives and turns off the only light near the elevator. From then on, that student lives in a thatched hut across from a forest and a path, until, decades later, on a rainy day, he is electrocuted by his own stupid donkey.
