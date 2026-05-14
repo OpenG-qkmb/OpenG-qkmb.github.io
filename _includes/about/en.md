@@ -9,3 +9,8 @@ If for any reason you need to go to a police station, be sure to enter the corre
 During assemblies, don’t smelt metal, and don’t mock others—because that might get you picked up by a pure red vintage car, which will drive you far away along a grassy dirt road. In the boiler room, be absolutely sure: only water that comes out of the tap can be used.
 
 You were caught in a flood during a dictation test and ended up on a bus. You and your friends burned down a castle, which cut off its water and electricity. Under a streetlamp, travelers are guided toward the enormous shadow of a castle staircase in the dark. Still, when a student walks down the dim, narrow hallway after school, he will see an abandoned wooden desk in the elevator lobby and hear knocking sounds. While arranging things in a dark wooden house, his visitor arrives and turns off the only light near the elevator. From then on, that student lives in a thatched hut across from a forest and a path, until, decades later, on a rainy day, he is electrocuted by his own stupid donkey.
+
+<div style="text-align: right;">
+    OpenG-qkmb<br>
+    December 29, 2022
+</div>
