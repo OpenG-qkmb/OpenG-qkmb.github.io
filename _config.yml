@@ -1,10 +1,10 @@
 # Site settings
-title: OpenG-qkmb
-SEOTitle: OpenG-qkmb的博客
+title: 伞焕羌登怨
+SEOTitle: 伞焕羌登怨的博客
 header-img: img/home-bg.jpg
 # email: radiumvs@foxmail.com
-description: "博客 - OpenG-qkmb"
-keyword: "博客, 人类, OpenG-qkmb, 神圣的言语, 哈儿, 哈儿实验室, 炼钢党"
+description: "博客 - 伞焕羌登怨"
+keyword: "博客, 人类, 伞焕羌登怨, 神圣的言语, 哈儿, 哈儿实验室, 炼钢党"
 url: "https://openg-qkmb.github.io/"			  # your host, for absolute URL
 baseurl: ""							 # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -50,7 +50,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true						   # whether or not using Sidebar.
-sidebar-about-description: "OpenG-qkmb"
+sidebar-about-description: "伞焕羌登怨"
 sidebar-avatar: https://khayer.cn/img/qkmb.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
