@@ -78,10 +78,10 @@ friends: [
 	# 	title: "哈儿实验室",
 	# 	href: "https://khayer.cn/"
 	# },
-	# {
-	# 	title: "哈儿实验室01分部",
-	# 	href: "https://mrhaer.github.io/"
-	# },
+	{
+		title: "MrHaer",
+		href: "https://mrhaer.github.io/"
+	},
 	{
 		title: "伪证大典官网",
 		href: "https://weizhengcom.github.io/"
