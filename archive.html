@@ -1,87 +1,37 @@
 ---
+layout: page
 title: 标签
-layout: default
 description: "在这里，你甚至能看见人类的言语"
 header-img: "img/tag-bg.jpg"
+wide: true
 ---
 
-<!-- 
-Credits: this page shamelessly borrowed a lot from:
-https://github.com/kitian616/jekyll-TeXt-theme
--->
-<!-- Page Header -->
-{% include intro-header.html type='page' short=true %}
+<div class="archive">
+    <div class="tag-cloud" id="tag-cloud" role="group" aria-label="按标签筛选">
+        <button class="tag-chip is-active" type="button" data-tag="">全部<sup>{{ site.posts | size }}</sup></button>
+        {% for tag in site.tags %}
+        <button class="tag-chip" type="button" data-tag="{{ tag[0] | url_encode }}">{{ tag[0] }}<sup>{{ tag[1] | size }}</sup></button>
+        {% endfor %}
+    </div>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					展示所有
-					<sup>{{site.posts.size}}</sup>
-				</a>
-
-				{% capture tags %}
-				{% for tag in site.tags %}
-				<a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
-					data-encode="{{ tag[0] | strip | url_encode }}"
-					class="tag-button"
-					title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-					{{ tag[0] }}
-					<sup>{{tag[1].size}}</sup>
-				</a>__SEPERATOR__
-				{% endfor %}
-				{% endcapture %}
-        {{ tags | split:'__SEPERATOR__' | sort }}
-			</div>
-
-            <!-- Article List -->
-			<div class="mini-post-list js-result d-none">
-			{%- assign _sorted_list = site.posts -%}
-			{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
-			{%- assign _sorted_list = _sorted_list | reverse -%}
-
-
-			{%- for _article in _sorted_list -%}
-				{%- assign _tags = '' -%}
-				{%- for _tag in _article.tags -%}
-					{%- assign _tag_encode = _tag | strip | url_encode -%}
-					{%- if forloop.last -%}
-						{%- assign _tags = _tags | append: _tag_encode -%}
-					{%- else -%}
-						{%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
-					{%- endif -%}
-				{%- endfor -%}
-
-			{% comment %} group by year {% endcomment %}
-			{%- assign _currentdate = _article.date | date: '%Y' -%}
-			{%- if _currentdate != _date -%}
-				{%- unless forloop.first -%}</section>{%- endunless -%}
-				<section>
-				<span class="fa listing-seperator">
-					<span class="tag-text">{{ _currentdate }}</span>
-				</span>
-				{%- assign _date = _currentdate -%}
-			{%- endif -%}
-
-				<div class="post-preview item" data-tags="{{ _tags }}">
-				    <a href="{{ _article.url | prepend: site.baseurl }}">
-				        <h2 class="post-title">
-                            {{ _article.title }}
-				        </h2>
-				        {% if _article.subtitle %}
-				        <h3 class="post-subtitle">
-				            {{ _article.subtitle }}
-				        </h3>
-				        {% endif %}
-				    </a>
-					<hr>
-				</div>
-			{%- if forloop.last -%}</section>{%- endif -%}
-			{% endfor %}
-			</div>
-		</div>
-	</div>
+    <div class="archive-list" id="archive-list">
+        {% assign current_year = '' %}
+        {% for post in site.posts %}
+            {% assign post_year = post.date | date: '%Y' %}
+            {% if post_year != current_year %}
+                {% unless forloop.first %}</div></section>{% endunless %}
+                <section class="archive-year" data-year="{{ post_year }}">
+                    <h2>{{ post_year }}</h2>
+                    <div class="archive-items">
+                {% assign current_year = post_year %}
+            {% endif %}
+            <a class="archive-item" href="{{ post.url | relative_url }}"
+                data-tags="{% for tag in post.tags %}{{ tag | url_encode }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%d' }}</time>
+                <span class="archive-title">{{ post.title }}</span>
+                {% if post.subtitle %}<span class="archive-sub">{{ post.subtitle }}</span>{% endif %}
+            </a>
+            {% if forloop.last %}</div></section>{% endif %}
+        {% endfor %}
+    </div>
 </div>

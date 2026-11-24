@@ -1,9 +1,10 @@
-{% if site.friends %}
-<hr>
-<h5>友情链接</h5>
-<ul class="list-inline">
-  {% for friend in site.friends %}
-  <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-  {% endfor %}
-</ul>
+{% if site.friends and site.friends.size > 0 %}
+<div class="friends">
+    <span class="friends-label">友情链接</span>
+    <ul>
+        {% for friend in site.friends %}
+        <li><a href="{{ friend.href }}" target="_blank" rel="noopener noreferrer">{{ friend.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 {% endif %}

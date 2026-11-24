@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include intro-header.html type='page' home=true %}
+
+<section class="home-main" id="post-list">
+    <div class="wrap">
+        <div class="section-head">
+            <h2>最近文章</h2>
+            <span>共 {{ paginator.total_posts }} 篇</span>
+        </div>
+
+        <div class="post-list">
+            {% for post in paginator.posts %}
+                {% include post-card.html post=post %}
+            {% endfor %}
+        </div>
+
+        {% include pagination.html %}
+    </div>
+</section>

@@ -1,0 +1,15 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="文章分页">
+    {% if paginator.previous_page %}
+    <a class="page-btn" href="{{ paginator.previous_page_path | relative_url }}">← 更新的文章</a>
+    {% else %}
+    <span class="page-btn is-disabled">← 更新的文章</span>
+    {% endif %}
+    <span class="page-info">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a class="page-btn" href="{{ paginator.next_page_path | relative_url }}">更旧的文章 →</a>
+    {% else %}
+    <span class="page-btn is-disabled">更旧的文章 →</span>
+    {% endif %}
+</nav>
+{% endif %}

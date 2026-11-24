@@ -1,109 +1,110 @@
 {% comment %}
-    @param {string} type - 'page' | 'post' | 'keynote'
-    @param {boolean} short
+  Title bar. @param {string} type - 'post' | 'page' | 'keynote'
+  @param {boolean} short - compact page header
+  @param {boolean} home - home page hero
+
+  Background resolution:
+    header-style: color            -> deterministic solid/gradient (ignores header-img)
+    header-style: image            -> image (page.header-img, else site.header-img)
+    header-bg-css: <css>           -> custom CSS background
+    page.header-img                -> image
+    other pages                    -> site.header-img if present, else deterministic color
+    other posts                    -> deterministic color (title + publish time)
 {% endcomment %}
 
-{% if include.type == 'post' %}
-<style type="text/css">
-    header.intro-header{
-        position: relative;
-        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
-        background: {{ page.header-bg-css }};
-    }
+{%- assign header_image = page.header-img | default: site.header-img -%}
+{%- assign header_mode = 'color' -%}
 
-    {% if page.header-mask %}
-    header.intro-header .header-mask{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: rgba(0,0,0, {{ page.header-mask }});
-    }
-    {% endif %}
-</style>
-{% if page.header-style == 'text' %}
-<header class="intro-header style-text" >
+{%- if page.header-bg-css -%}
+  {%- assign header_mode = 'custom' -%}
+{%- elsif page.header-style == 'color' or page.header-style == 'plain' or page.header-style == 'text' or page.header-bg == 'color' -%}
+  {%- assign header_mode = 'color' -%}
+{%- elsif page.header-style == 'image' -%}
+  {%- assign header_mode = 'image' -%}
+{%- elsif page.header-img -%}
+  {%- assign header_mode = 'image' -%}
+{%- elsif site.header-style == 'image' -%}
+  {%- assign header_mode = 'image' -%}
+{%- else -%}
+  {%- assign header_mode = 'color' -%}
+{%- endif -%}
+
+{%- if header_mode == 'image' and header_image == nil -%}{%- assign header_mode = 'color' -%}{%- endif -%}
+{%- if header_mode == 'image' and header_image == '' -%}{%- assign header_mode = 'color' -%}{%- endif -%}
+
+{% if include.type == 'keynote' and page.iframe %}
+<header class="intro-header intro-header--keynote">
+    <div class="keynote-frame">
+        <iframe src="{{ page.iframe }}" title="{{ page.title | escape }}" loading="lazy"></iframe>
+    </div>
+    <div class="intro-inner sr-only">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+    </div>
+</header>
 {% else %}
-<header class="intro-header" >
-{% endif %}
-    <div class="header-mask"></div>
+<header class="intro-header intro-header--{{ header_mode }}
+    {%- if include.short %} intro-header--short{% endif %}
+    {%- if include.home %} intro-header--home{% endif %}"
+    {% if header_mode == 'image' %}style="--header-image: url('{{ header_image | relative_url }}')"
+    {% elsif header_mode == 'custom' %}style="background: {{ page.header-bg-css }}"
+    {% else %}data-header-color data-title="{{ page.title | default: site.title | escape }}"
+        data-date="{{ page.date | date: '%Y-%m-%dT%H:%M:%S' }}"{% endif %}>
+    {% if header_mode == 'image' %}
+        <div class="header-mask"{% if page.header-mask %} style="opacity: {{ page.header-mask }}"{% endif %}></div>
+    {% endif %}
+    {% if header_mode == 'color' %}
+        <script>if (window.HeaderColor) { window.HeaderColor.apply(document.currentScript.parentNode); }</script>
+    {% endif %}
+
+    <div class="intro-inner">
+        {% if include.type == 'post' or include.type == 'keynote' %}
+        <div class="post-heading">
+            {% if page.tags %}
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <a href="{{ '/archive/' | relative_url }}?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+            <p class="post-meta">
+                <span>{{ page.author | default: site.title }}</span>
+                <span class="dot">·</span>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%-m月%-d日' }}</time>
+                {%- assign word_count = page.content | strip_html | size -%}
+                {%- assign read_minutes = word_count | divided_by: 400.0 | ceil | at_least: 1 -%}
+                <span class="dot">·</span>
+                <span>约 {{ read_minutes }} 分钟</span>
+            </p>
+        </div>
+        {% elsif include.home %}
+        <div class="page-heading">
+            <p class="eyebrow">{{ site.SEOTitle }}</p>
+            <h1>{{ page.title | default: site.title }}</h1>
+            <p class="page-desc">{{ page.description | default: site.description }}</p>
+            <a class="hero-scroll" href="#post-list" aria-label="浏览文章">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14"></path>
+                    <path d="m6 13 6 6 6-6"></path>
+                </svg>
+            </a>
+        </div>
+        {% else %}
+        <div class="page-heading">
+            <p class="eyebrow">{{ site.title }}</p>
+            <h1>{{ page.title | default: site.title }}</h1>
+            {% if page.description %}<p class="page-desc">{{ page.description }}</p>{% endif %}
+        </div>
+        {% endif %}
+    </div>
+
     {% if page.header-img-credit %}
-    <div class="header-img-credit">
-        Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
+    <div class="header-credit">
+        Image by <a href="//{{ page.header-img-credit-href }}">{{ page.header-img-credit }}</a>
     </div>
     {% endif %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %} always create a h2 for keeping the margin {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    <span class="meta">由 {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} 发布于 {{ page.date | date: "%Y年%-m月%-d日" }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-{% endif %}
-
-{% if include.type == 'keynote' %}
-<style type="text/css">
-    header.intro-header{
-        height: 500px;
-        overflow: hidden;
-    }
-    header.intro-header .container{
-        visibility: hidden; 
-    }
-    header iframe{
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-</style>
-<header class="intro-header" >
-    <iframe src="{{page.iframe}}"></iframe>
-    <!-- keep for SEO -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/archive/?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %} always create a h2 for keeping the margin {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    <span class="meta">由{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}发布于{{ page.date | date: "%Y年%-m月%-d日" }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-{% endif %}
-
-{% if include.type == 'page' %}
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {% if include.short %}
-        <div class="site-heading" id="tag-heading">
-        {% else %}
-        <div class="site-heading">
-        {% endif %}
-          <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-          <span class="subheading">{{ page.description }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
 {% endif %}

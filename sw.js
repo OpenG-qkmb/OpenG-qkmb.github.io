@@ -9,25 +9,22 @@
 // CACHE_NAMESPACE
 // CacheStorage is shared between all sites under same domain.
 // A namespace can prevent potential name conflicts and mis-deletion.
-const CACHE_NAMESPACE = 'main-'
+// Bump this version when the theme assets change, so returning visitors
+// do not keep an old stylesheet.
+const CACHE_NAMESPACE = 'main-v2-'
 
 const CACHE = CACHE_NAMESPACE + 'precache-then-runtime';
 const PRECACHE_LIST = [
   "./",
   "./offline.html",
-  "./js/jquery.min.js",
-  "./js/bootstrap.min.js",
-  "./js/hux-blog.min.js",
+  "./css/site.css",
+  "./js/site.js",
+  "./js/header-color.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
-  "./img/avatar-hux.jpg",
   "./img/home-bg.jpg",
   "./img/404-bg.jpg",
-  "./css/hux-blog.min.css",
-  "./css/bootstrap.min.css"
-  // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
-  // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3",
-  // "//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"
+  "./img/favicon.ico"
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
@@ -35,7 +32,7 @@ const HOSTNAME_WHITELIST = [
   "yanshuo.io",
   "cdnjs.cloudflare.com"
 ]
-const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']
+const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime', 'main-precache-then-runtime']
 
 
 // The Util Function to hack URLs of intercepted requests
@@ -193,7 +190,7 @@ self.addEventListener('fetch', event => {
     // Promise.race() resolves with first one settled (even rejected)
     // If the fetch fails (e.g disconnected), wait for the cache.
     // If there’s nothing in cache, wait for the fetch.
-    // If neither yields a response, return offline pages.
+    // If neither yields a result, return offline pages.
     event.respondWith(
       Promise.race([fetched.catch(_ => cached), cached])
         .then(resp => resp || fetched)
@@ -247,7 +244,7 @@ function sendMessageToClientsAsync(msg) {
  * TODO: Gh-pages rebuild everything in each release. should find a workaround (e.g. ETag with cloudflare)
  * 
  * @param  {Promise<response>} cachedResp  [description]
- * @param  {Promise<response>} fetchedResp [description]
+ * @param  {Promise<response>} fetchedResp  [description]
  * @return {Promise}
  */
 function revalidateContent(cachedResp, fetchedResp) {

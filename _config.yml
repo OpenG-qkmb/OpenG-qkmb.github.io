@@ -1,78 +1,102 @@
-# Site settings
+# ==========================================================================
+# 站点设置
+# ==========================================================================
 title: 伞焕羌登怨
 SEOTitle: 伞焕羌登怨的博客
 header-img: img/home-bg.jpg
 # email: radiumvs@foxmail.com
 description: "博客 - 伞焕羌登怨"
 keyword: "博客, 人类, 伞焕羌登怨, 神圣的言语, 哈儿, 哈儿实验室, 炼钢党"
-url: "https://shqdy.cn"			  # your host, for absolute URL
-baseurl: ""							 # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://shqdy.cn"              # your host, for absolute URL
+baseurl: ""                          # for example, '/blog' if your blog hosted on 'host/blog'
+
+# 统一按 UTC 构建：本地预览与 GitHub Pages 对发布时间的解释一致，
+# 标题栏配色凭据（标题 + 发布时间）也就不会因构建环境而变化。
+timezone: UTC
 
 # Publish posts or collection documents with a future date.
 future: true
 
-# SNS settings
-RSS: false 
-# github_username: hssrgov
+
+# ==========================================================================
+# 标题栏（title bar）
+# --------------------------------------------------------------------------
+# 文章标题栏背景有两种来源：
+#
+# 1. 图片：在文章 front matter 里写 header-img（沿用旧模板写法），
+#    例如 header-img: "img/7.jpg"；header-mask: 0.35 可再压暗一层。
+#
+# 2. 自动配色：不写 header-img 时，模板会由「标题 + 发布时间」算出唯一的
+#    16 位十六进制凭据，再映射到固定色板（13 种纯色 + 5 种低对比渐变）。
+#    色板全部为暖色/绿色系，不包含蓝紫，且已保证白色标题对比度 >= 5.2:1。
+#    同一篇文章永远同色；不同文章按凭据均匀分布。算法见 js/header-color.js。
+#
+#    也可以显式指定：
+#      header-style: color   # 强制自动配色（即使写了 header-img）
+#      header-style: image   # 强制使用图片
+#      header-style: text    # 兼容旧模板写法，等同 color
+#
+# 页面（layout: page）默认仍使用 site.header-img；写了 header-img 则用页面的图片。
+# ==========================================================================
+chrome-tab-theme-color: "#A4462A"
 
 
-
-# Build settings
+# ==========================================================================
+# 构建设置
+# ==========================================================================
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
 paginate: 15
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md","_deleted"]
-anchorjs: true						  # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN  
+anchorjs: true                       # kept for compatibility; the new theme auto-links headings
 
 
-
+# ==========================================================================
 # Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
+# ==========================================================================
 # `$ gem install jekyll-paginate`
 plugins: [jekyll-paginate]
 
 
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
+# ==========================================================================
+# Markdown 设置
+# ==========================================================================
 markdown: kramdown
-highlighter: rouge
 kramdown:
-  input: GFM							# use Github Flavored Markdown !important
+  input: GFM                         # use Github Flavored Markdown
 
 
-
-# Sidebar settings
-sidebar: true						   # whether or not using Sidebar.
+# ==========================================================================
+# 侧栏（旧模板配置，新模板为单栏阅读布局，保留键位以兼容旧配置）
+# ==========================================================================
+sidebar: false
 sidebar-about-description: "伞焕羌登怨"
-sidebar-avatar: /img/qkmb.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/qkmb.jpg        # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
+# ==========================================================================
+# Featured Tags（保留供旧 include 使用）
+# ==========================================================================
+featured-tags: true
+featured-condition-size: 1
 
-# Featured Tags
-featured-tags: true					 # whether or not using Feature-Tags
-featured-condition-size: 1			  # A tag will be featured if the size of it is more than this condition value
 
-
-
+# ==========================================================================
 # Progressive Web Apps
-chrome-tab-theme-color: "#CC0000"
+# ==========================================================================
 service-worker: true
 
 
-
+# ==========================================================================
 # MathJax rendering for layout:page (e.g. post preview)
+# ==========================================================================
 page-mathjax: false
 
 
-
+# ==========================================================================
 # Friends
+# ==========================================================================
 friends: [
 	# {
 	# 	title: "哈儿实验室",

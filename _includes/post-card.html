@@ -1,0 +1,24 @@
+{% assign post = include.post %}
+<article class="post-card">
+    <a class="post-card-link" href="{{ post.url | relative_url }}">
+        <div class="post-card-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+            {% if post.tags %}
+            <span class="post-card-tags">
+                {% for tag in post.tags %}<span>#{{ tag }}</span>{% endfor %}
+            </span>
+            {% endif %}
+        </div>
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        {% if post.subtitle %}<p class="post-card-subtitle">{{ post.subtitle }}</p>{% endif %}
+        <p class="post-card-excerpt">{{ post.content | strip_html | replace: '&emsp;', ' ' | strip | truncate: 180 }}</p>
+        <span class="post-card-more">
+            阅读全文
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+            </svg>
+        </span>
+    </a>
+</article>
