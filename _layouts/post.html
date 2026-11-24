@@ -34,4 +34,13 @@ layout: default
     {% endunless %}
 </div>
 
-{% if page.mathjax %}{% include mathjax_support.html %}{% endif %}
+{% comment %}
+  LaTeX support is automatic: load MathJax when the rendered article contains
+  math delimiters or kramdown's <script type="math/tex"> output. Set
+  `mathjax: false` in front matter to opt out.
+{% endcomment %}
+{% assign math_needed = false %}
+{% if page.mathjax == true or site.mathjax == true %}{% assign math_needed = true %}{% endif %}
+{% if content contains '$' or content contains 'math/tex' %}{% assign math_needed = true %}{% endif %}
+{% if page.mathjax == false %}{% assign math_needed = false %}{% endif %}
+{% if math_needed %}{% include mathjax_support.html %}{% endif %}

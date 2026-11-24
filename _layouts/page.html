@@ -10,4 +10,9 @@ layout: default
     </div>
 </div>
 
-{% if site.page-mathjax %}{% include mathjax_support.html %}{% endif %}
+{% comment %} Same automatic LaTeX detection as the post layout. {% endcomment %}
+{% assign math_needed = false %}
+{% if site.page-mathjax or page.mathjax == true %}{% assign math_needed = true %}{% endif %}
+{% if content contains '$' or content contains 'math/tex' %}{% assign math_needed = true %}{% endif %}
+{% if page.mathjax == false %}{% assign math_needed = false %}{% endif %}
+{% if math_needed %}{% include mathjax_support.html %}{% endif %}

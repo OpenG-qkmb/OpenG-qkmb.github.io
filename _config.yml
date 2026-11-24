@@ -65,6 +65,10 @@ plugins: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM                         # use Github Flavored Markdown
+# 数学公式：文章正文出现 $...$ / $$...$$（或 kramdown 生成的 math/tex 脚本）时，
+# 会自动加载 MathJax 3 并按 TeX 渲染；不需要在每篇文章里写开关。
+# 如某篇文章需要关闭，可在 front matter 写 `mathjax: false`。
+# 也可在站点级设置 `mathjax: true` 强制所有文章加载。
 
 
 # ==========================================================================

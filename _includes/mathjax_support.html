@@ -1,20 +1,37 @@
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    SVG: {
-      scale: 90
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    }
-  });
+<!--
+  MathJax 3 (TeX -> SVG).
+
+  GitHub Pages renders Markdown with kramdown's default math engine, which
+  wraps $$...$$ in <script type="math/tex">. MathJax 3 no longer reads those
+  tags, so this converter turns them back into delimiter text before MathJax
+  starts. Raw $...$ / $$...$$ written in HTML also keeps working.
+-->
+<script>
+    (function () {
+        var nodes = document.querySelectorAll('script[type^="math/tex"]');
+        for (var i = 0; i < nodes.length; i += 1) {
+            var node = nodes[i];
+            var display = node.type.indexOf('mode=display') !== -1;
+            var wrapper = document.createElement('span');
+            wrapper.className = display ? 'math-display' : 'math-inline';
+            wrapper.textContent = (display ? '\\[' : '\\(') + node.textContent + (display ? '\\]' : '\\)');
+            node.parentNode.replaceChild(wrapper, node);
+        }
+    })();
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        svg: { fontCache: 'global' },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    };
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+    onerror="this.onerror=null;var s=document.createElement('script');s.defer=true;s.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js';document.head.appendChild(s);"></script>

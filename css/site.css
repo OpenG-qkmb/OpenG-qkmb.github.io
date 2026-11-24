@@ -22,11 +22,21 @@
   --code-ink: #e9e2d6;
   --hero-fallback: #6e2f2f;
 
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC",
-    "Source Han Serif SC", "Noto Serif CJK SC", "SimSun", serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue",
-    Arial, sans-serif;
+  /* 中文黑体 + 西文无衬线：屏幕长文更清爽，也避免 Windows 回退到宋体。
+     参考：hellofont 正文字体推荐、justfont 中英字体配对。 */
+  --sans: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC",
+    "Source Han Sans SC", sans-serif;
+  /* 标题用人文感更强的展示字体栈，中文仍落到黑体，不使用宋体。 */
+  --display: "Optima", "Candara", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC",
+    "Source Han Sans SC", sans-serif;
+  /* 西文衬线 + 中文黑体：只用于英文副标题、日期数字、引文。
+     以 sans-serif 收尾，确保中文永远不会回退到默认宋体。 */
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
+    sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
   --nav-h: 64px;
@@ -72,9 +82,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 17px;
-  line-height: 1.75;
+  line-height: 1.8;
+  letter-spacing: 0.006em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -174,10 +185,10 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.08rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   white-space: nowrap;
 }
 
@@ -390,11 +401,11 @@ body:not(.has-hero) .site-nav,
 
 .intro-header h1 {
   margin: 0 0 1.1rem;
-  font-family: var(--serif);
-  font-size: clamp(2.1rem, 4.6vw, 3.35rem);
-  font-weight: 700;
-  line-height: 1.28;
-  letter-spacing: 0.012em;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4.2vw, 3.05rem);
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: 0.015em;
   text-wrap: balance;
   color: #fff;
 }
@@ -431,6 +442,7 @@ body:not(.has-hero) .site-nav,
   margin: 0 0 1.7rem;
   font-family: var(--serif);
   font-style: italic;
+  font-synthesis: none;
   font-size: clamp(1rem, 1.5vw, 1.16rem);
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.88);
@@ -453,7 +465,7 @@ body:not(.has-hero) .site-nav,
 .page-desc {
   max-width: 60ch;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(0.98rem, 1.4vw, 1.1rem);
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.86);
@@ -568,14 +580,22 @@ body:not(.has-hero) .site-nav,
   color: var(--ink-4);
 }
 
+.post-card-meta time,
+.archive-item time {
+  font-family: var(--serif);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
 .post-card-tags { display: inline-flex; gap: 0.6rem; }
 
 .post-card-title {
   margin: 0 0 0.5rem;
-  font-family: var(--serif);
-  font-size: clamp(1.45rem, 2.7vw, 1.95rem);
-  font-weight: 700;
-  line-height: 1.38;
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 2.5vw, 1.82rem);
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: 0.012em;
   color: var(--ink);
   transition: color 0.22s ease;
 }
@@ -587,6 +607,7 @@ body:not(.has-hero) .site-nav,
   font-family: var(--serif);
   font-size: 0.95rem;
   font-style: italic;
+  font-synthesis: none;
   line-height: 1.6;
   color: var(--ink-3);
 }
@@ -715,8 +736,9 @@ body:not(.has-hero) .site-nav,
 
 /* ------------------------------------------------------------------- prose */
 .prose {
-  font-size: 1.04rem;
-  line-height: 1.95;
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  line-height: 1.92;
   color: var(--ink);
 }
 
@@ -724,7 +746,7 @@ body:not(.has-hero) .site-nav,
 
 .prose p {
   margin: 0 0 1.45em;
-  line-height: 1.95;
+  line-height: 1.92;
 }
 
 .prose h1,
@@ -733,9 +755,9 @@ body:not(.has-hero) .site-nav,
 .prose h4,
 .prose h5,
 .prose h6 {
-  font-family: var(--serif);
-  font-weight: 700;
-  line-height: 1.4;
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.45;
   color: var(--ink);
   scroll-margin-top: calc(var(--nav-h) + 24px);
 }
@@ -743,19 +765,21 @@ body:not(.has-hero) .site-nav,
 .prose h2 {
   margin: 2.6em 0 1em;
   padding-left: 0.7em;
-  font-size: 1.5rem;
+  font-size: 1.42rem;
+  font-weight: 600;
   border-left: 3px solid var(--accent);
 }
 
 .prose h1 {
   margin: 0 0 1.1em;
-  font-size: clamp(1.7rem, 3.4vw, 2.1rem);
+  font-size: clamp(1.65rem, 3.2vw, 1.95rem);
   letter-spacing: 0.01em;
 }
 
 .prose h3 {
   margin: 2.2em 0 0.8em;
-  font-size: 1.2rem;
+  font-size: 1.16rem;
+  font-weight: 600;
 }
 
 .prose h4 {
@@ -799,6 +823,7 @@ body:not(.has-hero) .site-nav,
   border-radius: 0 10px 10px 0;
   background: var(--bg-alt);
   color: var(--ink-2);
+  font-family: var(--serif);
 }
 
 .prose blockquote p:last-child { margin-bottom: 0; }
@@ -903,6 +928,28 @@ body:not(.has-hero) .site-nav,
 
 .prose iframe { max-width: 100%; border: 0; }
 
+/* MathJax 3 (SVG). Long formulas scroll horizontally instead of breaking
+   the reading column on small screens. */
+.math-display {
+  display: block;
+  margin: 1.6em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.math-inline { white-space: nowrap; }
+
+mjx-container[jax="SVG"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  margin: 1.1em 0 !important;
+}
+
 .heading-anchor {
   margin-left: 0.45em;
   color: var(--ink-4);
@@ -981,10 +1028,10 @@ body:not(.has-hero) .site-nav,
 
 .post-nav-item strong {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 0.98rem;
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--ink);
 }
 
@@ -1097,15 +1144,18 @@ body.lang-en .page-body .zh { display: none; }
 }
 
 .archive-item time {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
   letter-spacing: 0.07em;
   color: var(--ink-4);
 }
 
 .archive-title {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.008em;
   line-height: 1.55;
   transition: color 0.2s ease;
 }
@@ -1211,8 +1261,9 @@ body.lang-en .page-body .zh { display: none; }
 
 .search-result-title {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1rem;
+  font-weight: 500;
   color: var(--ink);
 }
 
@@ -1252,8 +1303,10 @@ body.lang-en .page-body .zh { display: none; }
 
 .footer-brand {
   margin: 0 0 0.45rem;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--ink);
 }
 

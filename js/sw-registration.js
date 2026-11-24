@@ -1,57 +1,48 @@
-/* ===========================================================
- * sw-registration.js
- * ===========================================================
- * Copyright 2016 @huxpro
- * Licensed under Apache 2.0
- * Register service worker.
- * ========================================================== */
+/*!
+ * sw-registration.js — service worker registration + update notice.
+ *
+ * A single content update must not nag the reader on every navigation, so the
+ * last notified build version is remembered for the browser session. The
+ * service worker also suppresses repeat messages while it stays alive.
+ */
+(function () {
+  'use strict';
 
-// SW Version Upgrade Ref: <https://youtu.be/Gb9uI67tqV0>
+  var UPDATE_KEY = 'blog-sw-update-version';
 
-function handleRegistration(registration){
-  console.log('Service Worker Registered. ', registration)
-  /**
-   * ServiceWorkerRegistration.onupdatefound
-   * The service worker registration's installing worker changes.
-   */
-  registration.onupdatefound = (e) => {
-    const installingWorker = registration.installing;
-    installingWorker.onstatechange = (e) => {
-      if (installingWorker.state !== 'installed') return;
-      if (navigator.serviceWorker.controller) {
-        console.log('SW is updated');
-      } else {
-        console.log('A Visit without previous SW');
-        createSnackbar({
-          message: 'App ready for offline use.',
-          duration: 3000
-        })
-      }
-    };
+  function readSession(key) {
+    try { return window.sessionStorage.getItem(key) || ''; } catch (error) { return ''; }
   }
-}
 
-if(navigator.serviceWorker){
-  // For security reasons, a service worker can only control the pages
-  // that are in the same directory level or below it. That's why we put sw.js at ROOT level.
-  navigator.serviceWorker
-    .register('/sw.js')
-    .then((registration) => handleRegistration(registration))
-    .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+  function writeSession(key, value) {
+    try { window.sessionStorage.setItem(key, value); } catch (error) { /* private mode */ }
+  }
 
-  // register message receiver
-  // https://dbwriteups.wordpress.com/2015/11/16/service-workers-part-3-communication-between-sw-and-pages/
-  navigator.serviceWorker.onmessage = (e) => {
-    console.log('SW: SW Broadcasting:', event);
-    const data = e.data
-    
-    if(data.command == "UPDATE_FOUND"){
-      console.log("UPDATE_FOUND_BY_SW", data);
-      createSnackbar({
-        message: "Content updated.",
-        actionText:"refresh",
-        action: function(e){location.reload()}
-      })
+  function showUpdate(version) {
+    var key = version || 'unknown';
+    if (readSession(UPDATE_KEY) === key) return;
+    writeSession(UPDATE_KEY, key);
+
+    if (typeof window.createSnackbar !== 'function') return;
+    window.createSnackbar({
+      message: '内容已更新',
+      actionText: '刷新',
+      action: function () { window.location.reload(); }
+    });
+  }
+
+  if (!('serviceWorker' in navigator)) return;
+
+  navigator.serviceWorker.register('/sw.js').catch(function (error) {
+    if (window.console && window.console.warn) {
+      window.console.warn('ServiceWorker registration failed:', error);
     }
-  }
-}
+  });
+
+  navigator.serviceWorker.addEventListener('message', function (event) {
+    var data = event.data || {};
+    if (data.command !== 'UPDATE_FOUND') return;
+    var version = data.version || String(data.url || '').split('?')[0];
+    showUpdate(version);
+  });
+})();

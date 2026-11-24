@@ -11,7 +11,7 @@
 // A namespace can prevent potential name conflicts and mis-deletion.
 // Bump this version when the theme assets change, so returning visitors
 // do not keep an old stylesheet.
-const CACHE_NAMESPACE = 'main-v2-'
+const CACHE_NAMESPACE = 'main-v3-'
 
 const CACHE = CACHE_NAMESPACE + 'precache-then-runtime';
 const PRECACHE_LIST = [
@@ -32,7 +32,7 @@ const HOSTNAME_WHITELIST = [
   "yanshuo.io",
   "cdnjs.cloudflare.com"
 ]
-const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime', 'main-precache-then-runtime']
+const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime', 'main-precache-then-runtime', 'main-v2-precache-then-runtime']
 
 
 // The Util Function to hack URLs of intercepted requests
@@ -239,6 +239,10 @@ function sendMessageToClientsAsync(msg) {
   }, 1000)
 }
 
+// Remember the last build we already told clients about, so a single content
+// update produces one notification instead of one per navigation.
+let lastNotifiedVersion = null;
+
 /**
  * if content modified, we can notify clients to refresh
  * TODO: Gh-pages rebuild everything in each release. should find a workaround (e.g. ETag with cloudflare)
@@ -255,9 +259,13 @@ function revalidateContent(cachedResp, fetchedResp) {
       const fetchedVer = fetched.headers.get('last-modified')
       console.log(`"${cachedVer}" vs. "${fetchedVer}"`);
       if (cachedVer !== fetchedVer) {
+        const version = CACHE_NAMESPACE + '|' + (fetchedVer || '')
+        if (version === lastNotifiedVersion) return
+        lastNotifiedVersion = version
         sendMessageToClientsAsync({
           'command': 'UPDATE_FOUND',
-          'url': fetched.url
+          'url': fetched.url,
+          'version': version
         })
       }
     })
